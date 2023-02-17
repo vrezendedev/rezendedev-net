@@ -1,0 +1,55 @@
+.window {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    user-select: none;
+    opacity: 1;
+    animation-name: windowFadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.18s;
+}
+
+@keyframes windowFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.window-background,
+.window-header,
+.window-header-options,
+.water {
+    display: block;
+    position: absolute;
+}
+
+.window-header {
+    z-index: 99;
+    width: 100%;
+    height: auto;
+}
+
+.window-header-options {
+    z-index: 100;
+    &:hover {
+        cursor: pointer;
+    }
+    left: 97.5%;
+    top: 0.5%;
+}
+
+.window-background {
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.38);
+}
+
+.water {
+    z-index: 3;
+    opacity: 1;
+}

@@ -1,0 +1,89 @@
+.art-kingdom-terrain,
+.art-kingdom-limits,
+.art-kingdom-title,
+.programming-kingdom-terrain,
+.programming-kingdom-limits,
+.programming-kingdom-title,
+.gamedev-kingdom-terrain,
+.gamedev-kingdom-limits,
+.gamedev-kingdom-title,
+.wizard-kingdom-terrain,
+.wizard-kingdom-limits,
+.wizard-kingdom-title,
+.music-kingdom-terrain,
+.music-kingdom-limits,
+.music-kingdom-title,
+.void-terrain,
+.void-limits,
+.void-title {
+  display: block;
+  position: absolute;
+}
+
+.art-kingdom-terrain,
+.programming-kingdom-terrain,
+.gamedev-kingdom-terrain,
+.wizard-kingdom-terrain,
+.music-kingdom-terrain,
+.void-terrain {
+  z-index: 3;
+  transition: opacity ease-in-out 0.25s;
+}
+
+.art-kingdom-limits,
+.programming-kingdom-limits,
+.gamedev-kingdom-limits,
+.wizard-kingdom-limits,
+.music-kingdom-limits,
+.void-limits {
+  z-index: 5;
+  opacity: 0.5;
+  transition: opacity ease-in-out 0.25s;
+}
+
+.programming-kingdom-title,
+.art-kingdom-title,
+.gamedev-kingdom-title,
+.wizard-kingdom-title,
+.music-kingdom-title,
+.void-title {
+  z-index: 6;
+}
+.programming-kingdom-title:hover,
+.art-kingdom-title:hover,
+.gamedev-kingdom-title:hover,
+.wizard-kingdom-title:hover,
+.music-kingdom-title:hover,
+.void-title:hover {
+  cursor: pointer;
+}
+
+.art-kingdom-title {
+  left: 25%;
+  bottom: 5%;
+}
+
+.programming-kingdom-title {
+  left: 3%;
+  top: 26%;
+}
+
+.gamedev-kingdom-title {
+  left: 45%;
+  bottom: 50%;
+}
+
+.wizard-kingdom-title {
+  right: 3%;
+  top: 10%;
+}
+
+.music-kingdom-title {
+  left: 50%;
+  bottom: 6%;
+}
+
+.void-title {
+  bottom: 3%;
+  right: 2.5%;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,40 @@
+.clouds {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    transition: opacity ease-in 2s;
+}
+
+@keyframes marqueeLeft {
+    0% {
+        left: 0%;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        left: 94%;
+        opacity: 0;
+    }
+}
+
+@keyframes marqueeRight {
+    0% {
+        right: 0%;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        right: 94%;
+        opacity: 0;
+    }
+}
