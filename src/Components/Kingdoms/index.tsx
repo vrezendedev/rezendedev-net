@@ -118,7 +118,7 @@ function Kingdoms({
                                         ? '1'
                                         : '0.25',
                             }}
-                            draggable="false"
+                            draggable={false}
                         />
                         <img
                             className={kingdom.limitClass}
@@ -129,7 +129,7 @@ function Kingdoms({
                                         ? 'none'
                                         : 'inline',
                             }}
-                            draggable="false"
+                            draggable={false}
                         />
                         <img
                             className={kingdom.titleClass}
@@ -146,7 +146,7 @@ function Kingdoms({
                                 });
                                 setTopModal(kingdom.name);
                             }}
-                            draggable="false"
+                            draggable={false}
                         />
                     </div>
                 );

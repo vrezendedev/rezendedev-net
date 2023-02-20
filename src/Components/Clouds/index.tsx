@@ -22,13 +22,18 @@ type Direction = 'right' | 'left';
 type CloudsProps = {
     parentWidth: number;
     parentHeight: number;
+    zIndex: number;
+    numberOfClouds: number;
 };
 
-function Clouds({ parentWidth, parentHeight }: CloudsProps) {
+function Clouds({
+    parentWidth,
+    parentHeight,
+    zIndex,
+    numberOfClouds,
+}: CloudsProps) {
     const [direction, setDirection] = useState<Direction>('right');
     const [clouds, setClouds] = useState<Array<Cloud>>([]);
-
-    const numberOfClouds = 12;
 
     const availableClouds = [
         Cloud_01,
@@ -99,8 +104,9 @@ function Clouds({ parentWidth, parentHeight }: CloudsProps) {
                                     ? `marqueeRight ${cloud.velocity}s linear infinite`
                                     : `marqueeLeft ${cloud.velocity}s linear infinite`,
                             pointerEvents: 'none',
+                            zIndex: zIndex,
                         }}
-                        draggable="false"
+                        draggable={false}
                         className="clouds"
                     />
                 );

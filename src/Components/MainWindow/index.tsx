@@ -61,7 +61,7 @@ function MainWindow(props: MainWindowProps) {
                     <img
                         src={WindowHeaderOptions}
                         className="window-header-options"
-                        draggable="false"
+                        draggable={false}
                         onClick={() => props.isModalOpen(false)}
                     />
                     <img
@@ -77,7 +77,12 @@ function MainWindow(props: MainWindowProps) {
                     <img className="window-background" src={Window} />
                     <img className="water" src={Water} />
 
-                    <Clouds parentWidth={550} parentHeight={365} />
+                    <Clouds
+                        parentWidth={550}
+                        parentHeight={365}
+                        zIndex={10}
+                        numberOfClouds={16}
+                    />
 
                     <Kingdoms
                         kingdomHighlighted={kingdomHighlighted}

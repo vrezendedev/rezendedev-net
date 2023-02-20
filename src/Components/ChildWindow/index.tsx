@@ -105,13 +105,13 @@ function ChildWindow({
                     style={{
                         cursor: mouseOnHeader == true ? 'move' : 'default',
                     }}
-                    draggable="false"
+                    draggable={false}
                 />
 
                 <img
                     src={ChildWindowHeaderOptions}
                     className="child-window-header-options"
-                    draggable="false"
+                    draggable={false}
                     onClick={() =>
                         setKingdomModals((prev) =>
                             prev.filter((obj) => obj != childKingdom)
@@ -122,7 +122,7 @@ function ChildWindow({
                 <img
                     className="child-window-background"
                     src={ChildWindowBackground}
-                    draggable="false"
+                    draggable={false}
                 />
 
                 <Content />

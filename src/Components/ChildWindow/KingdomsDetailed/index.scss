@@ -1,4 +1,7 @@
-.terrain-detailed {
+.terrain-detailed,
+.building-one-detailed,
+.building-two-detailed,
+.building-three-detailed {
     display: block;
     position: absolute;
 }
@@ -6,4 +9,19 @@
 .terrain-detailed {
     z-index: 12;
     transition: opacity ease-in-out 0.25s;
+}
+
+.building-one-detailed,
+.building-two-detailed,
+.building-three-detailed {
+    z-index: 14;
+    opacity: 0.5;
+    transition: opacity ease-in-out 0.25s;
+    &:hover {
+        cursor: pointer;
+        border-style: dashed;
+        border-color: white;
+        border-width: 3px;
+        opacity: 1;
+    }
 }

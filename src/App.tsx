@@ -55,7 +55,7 @@ function App() {
                 <img
                     src={Icon}
                     className="icon"
-                    draggable="false"
+                    draggable={false}
                     style={{
                         borderColor: 'rgba(0, 190, 255, .4)',
                         borderStyle: selected == true ? 'solid' : '',
