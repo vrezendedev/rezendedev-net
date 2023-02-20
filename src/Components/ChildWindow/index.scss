@@ -1,0 +1,49 @@
+.child-window {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    user-select: none;
+    opacity: 1;
+    animation-name: windowFadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.18s;
+}
+
+@keyframes windowFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.child-window-header,
+.child-window-header-options,
+.child-window-background {
+    display: block;
+    position: absolute;
+}
+
+.child-window-header {
+    z-index: 101;
+    width: 100%;
+    height: auto;
+}
+
+.child-window-header-options {
+    z-index: 102;
+    &:hover {
+        cursor: pointer;
+    }
+    right: 3%;
+    top: 2.9%;
+}
+
+.child-window-background {
+    z-index: 11;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.38);
+}

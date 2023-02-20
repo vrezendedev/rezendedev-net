@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 import './../Kingdoms/index.css';
 
 import ArtKingdomTerrain from '../../Assets/MainWindow/Kingdoms/Art/ArtKingdomTerrain.png';
@@ -38,14 +36,16 @@ type Kingdom = {
 
 type KingdomProps = {
     kingdomHighlighted: string;
-    setKingdomHighlighted: React.Dispatch<React.SetStateAction<string>>;
-    setKingdomModals: React.Dispatch<React.SetStateAction<String[]>>;
+    setKingdomHighlighted: (value: string) => void;
+    setKingdomModals: (value: React.SetStateAction<string[]>) => void;
+    setTopModal: (value: string) => void;
 };
 
 function Kingdoms({
     kingdomHighlighted,
     setKingdomHighlighted,
     setKingdomModals,
+    setTopModal,
 }: KingdomProps) {
     const Kingdoms: Array<Kingdom> = [
         {
@@ -138,13 +138,14 @@ function Kingdoms({
                                 setKingdomHighlighted(kingdom.name)
                             }
                             onMouseLeave={() => setKingdomHighlighted(' ')}
-                            onClick={() =>
+                            onClick={() => {
                                 setKingdomModals((prev) => {
                                     if (!prev.includes(kingdom.name))
                                         return [...prev, kingdom.name];
                                     else return prev;
-                                })
-                            }
+                                });
+                                setTopModal(kingdom.name);
+                            }}
                             draggable="false"
                         />
                     </div>

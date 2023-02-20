@@ -59,8 +59,8 @@ function Clouds({ parentWidth, parentHeight }: CloudsProps) {
         let velocityOffset;
 
         do {
-            velocityOffset = Math.random() * 10;
-        } while (velocityOffset < 7 || velocityOffset > 8);
+            velocityOffset = Math.random() * 15;
+        } while (velocityOffset < 11 || velocityOffset > 13);
 
         do {
             startPosH =
@@ -98,6 +98,7 @@ function Clouds({ parentWidth, parentHeight }: CloudsProps) {
                                 direction == 'right'
                                     ? `marqueeRight ${cloud.velocity}s linear infinite`
                                     : `marqueeLeft ${cloud.velocity}s linear infinite`,
+                            pointerEvents: 'none',
                         }}
                         draggable="false"
                         className="clouds"

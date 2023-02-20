@@ -1,0 +1,9 @@
+.terrain-detailed {
+    display: block;
+    position: absolute;
+}
+
+.terrain-detailed {
+    z-index: 12;
+    transition: opacity ease-in-out 0.25s;
+}
