@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react';
-
 import './../index.css';
 
 import ArtKingdomDetailedTerrain from '../../../../Assets/ChildWindow/Kingdoms/Art/ArtKingdomDetailedTerrain.png';
@@ -7,9 +5,11 @@ import ArtKingdomDetailedTower from '../../../../Assets/ChildWindow/Kingdoms/Art
 import ArtKingdomDetailedCastle from '../../../../Assets/ChildWindow/Kingdoms/Art/ArtKingdomDetailedCastle.png';
 import ArtKingdomDetailedVillage from '../../../../Assets/ChildWindow/Kingdoms/Art/ArtKingdomDetailedVillage.png';
 
+import { ContentWindowProps } from '../../index';
+
 import Clouds from '../../../Clouds';
 
-function ArtKingdomDetailed() {
+function ArtKingdomDetailed({ setLocationSubtitle }: ContentWindowProps) {
     return (
         <div>
             <img
@@ -18,33 +18,39 @@ function ArtKingdomDetailed() {
                 draggable={false}
             />
             <img
-                className="building-one-detailed"
+                className="building"
                 src={ArtKingdomDetailedTower}
                 draggable={false}
                 style={{
                     left: '36.5%',
                     top: '23%',
                 }}
+                onMouseEnter={() => setLocationSubtitle('Tower of 2D')}
+                onMouseLeave={() => setLocationSubtitle('')}
             />
 
             <img
-                className="building-two-detailed"
+                className="building"
                 src={ArtKingdomDetailedCastle}
                 draggable={false}
                 style={{
                     left: '35%',
                     top: '60%',
                 }}
+                onMouseEnter={() => setLocationSubtitle('Castle of 3D')}
+                onMouseLeave={() => setLocationSubtitle('')}
             />
 
             <img
-                className="building-three-detailed"
+                className="building"
                 src={ArtKingdomDetailedVillage}
                 draggable={false}
                 style={{
                     right: '30%',
                     bottom: '32%',
                 }}
+                onMouseEnter={() => setLocationSubtitle('Inspiration Village')}
+                onMouseLeave={() => setLocationSubtitle('')}
             />
 
             <Clouds

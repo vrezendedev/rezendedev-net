@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "8-bit Limit";
+  src: url("../../Assets/8-bit-limit.brk.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 .child-window {
   position: absolute;
   left: 50%;
@@ -22,7 +28,8 @@
 }
 .child-window-header,
 .child-window-header-options,
-.child-window-background {
+.child-window-background,
+.locationSubtitle {
   display: block;
   position: absolute;
 }
@@ -47,4 +54,33 @@
   width: 100%;
   height: auto;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.38);
+}
+
+.locationSubtitle {
+  width: 200px;
+  height: auto;
+  z-index: 100;
+  left: 19.5%;
+  bottom: 5%;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0;
+  padding: 0;
+  font-family: "8-bit Limit";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  opacity: 1;
+  color: lightgoldenrodyellow;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+  animation-name: windowFadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  border: 1px wheat solid;
+  border-left: none;
+  border-right: none;
 }/*# sourceMappingURL=index.css.map */

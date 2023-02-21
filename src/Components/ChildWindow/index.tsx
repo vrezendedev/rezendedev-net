@@ -15,13 +15,21 @@ import WizardReignHeader from '../../Assets/ChildWindow/WizardReignHeader.png';
 import VoidHeader from '../../Assets/ChildWindow/VoidHeader.png';
 
 import ArtKingdomDetailed from './KingdomsDetailed/Art/index';
-import Kingdoms from '../Kingdoms';
+import ProgrammingKingdomDetailed from './KingdomsDetailed/Programming/index';
+import GameDevKingdomDetailed from './KingdomsDetailed/GameDev/index';
+import MusicKingdomDetailed from './KingdomsDetailed/Music';
+import WizardReignDetailed from './KingdomsDetailed/Wizard';
+import VoidDetailed from './KingdomsDetailed/Void';
 
 type KingdomContent = Record<string, Contents>;
 
 type Contents = {
     header: string;
-    content: ComponentType;
+    content: ComponentType<ContentWindowProps>;
+};
+
+export type ContentWindowProps = {
+    setLocationSubtitle: (value: React.SetStateAction<string>) => void;
 };
 
 type ChildWindowProps = {
@@ -38,23 +46,23 @@ const KingdomContents: KingdomContent = {
     },
     programming: {
         header: ProgrammingKingdomHeader,
-        content: ArtKingdomDetailed,
+        content: ProgrammingKingdomDetailed,
     },
     gamedev: {
         header: GameDevKingdomHeader,
-        content: ArtKingdomDetailed,
+        content: GameDevKingdomDetailed,
     },
     music: {
         header: MusicKingdomHeader,
-        content: ArtKingdomDetailed,
+        content: MusicKingdomDetailed,
     },
     wizard: {
         header: WizardReignHeader,
-        content: ArtKingdomDetailed,
+        content: WizardReignDetailed,
     },
     void: {
         header: VoidHeader,
-        content: ArtKingdomDetailed,
+        content: VoidDetailed,
     },
 };
 
@@ -66,6 +74,7 @@ function ChildWindow({
 }: ChildWindowProps) {
     const [mouseOnHeader, setMouseOnHeader] = useState(false);
     const [display, setDisplay] = useState('none');
+    const [locationSubtitle, setLocationSubtitle] = useState('');
 
     const Content = KingdomContents[childKingdom].content;
 
@@ -125,7 +134,16 @@ function ChildWindow({
                     draggable={false}
                 />
 
-                <Content />
+                <Content setLocationSubtitle={setLocationSubtitle} />
+
+                {locationSubtitle != '' ? (
+                    <div
+                        className="locationSubtitle"
+                        style={{ pointerEvents: 'none' }}
+                    >
+                        <p className="subtitle">{locationSubtitle}</p>
+                    </div>
+                ) : null}
             </div>
         </Draggable>
     );
