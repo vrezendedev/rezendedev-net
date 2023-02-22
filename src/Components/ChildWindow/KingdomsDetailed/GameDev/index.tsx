@@ -8,7 +8,10 @@ import { ContentWindowProps } from '../../index';
 
 import Clouds from '../../../Clouds';
 
-function GameDevKingdomDetailed({ setLocationSubtitle }: ContentWindowProps) {
+function GameDevKingdomDetailed({
+    setLocationSubtitle,
+    handleBrowserContent,
+}: ContentWindowProps) {
     return (
         <div>
             <img
@@ -26,6 +29,7 @@ function GameDevKingdomDetailed({ setLocationSubtitle }: ContentWindowProps) {
                 }}
                 onMouseEnter={() => setLocationSubtitle('Pillars of Creation')}
                 onMouseLeave={() => setLocationSubtitle('')}
+                onClick={() => handleBrowserContent('pillarsofcreation.sail')}
             />
 
             <img
@@ -38,12 +42,13 @@ function GameDevKingdomDetailed({ setLocationSubtitle }: ContentWindowProps) {
                 }}
                 onMouseEnter={() => setLocationSubtitle('Utilitary Windmill')}
                 onMouseLeave={() => setLocationSubtitle('')}
+                onClick={() => handleBrowserContent('utilitarywindmill.sail')}
             />
 
             <Clouds
                 parentHeight={180}
                 parentWidth={324}
-                zIndex={15}
+                zIndex={14}
                 numberOfClouds={8}
             />
         </div>

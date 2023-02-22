@@ -137,7 +137,7 @@ function Kingdoms({
                             onMouseOver={() =>
                                 setKingdomHighlighted(kingdom.name)
                             }
-                            onMouseLeave={() => setKingdomHighlighted(' ')}
+                            onMouseLeave={() => setKingdomHighlighted('')}
                             onClick={() => {
                                 setKingdomModals((prev) => {
                                     if (!prev.includes(kingdom.name))

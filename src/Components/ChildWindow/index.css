@@ -6,8 +6,8 @@
 }
 .child-window {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 2.5%;
+  top: 60%;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -42,8 +42,8 @@
 
 .child-window-header-options {
   z-index: 102;
-  right: 3%;
-  top: 2.9%;
+  right: 2.9%;
+  top: 1.25%;
 }
 .child-window-header-options:hover {
   cursor: pointer;

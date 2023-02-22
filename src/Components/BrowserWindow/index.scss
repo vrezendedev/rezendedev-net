@@ -1,0 +1,75 @@
+@font-face {
+    font-family: '8-bit Limit';
+    src: url('../../Assets/8-bit-limit.brk.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.browser-window {
+    position: absolute;
+    left: 60%;
+    top: 10%;
+    user-select: none;
+    opacity: 1;
+    animation-name: windowFadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.18s;
+}
+
+@keyframes windowFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.browser-window-header,
+.browser-window-header-options,
+.browser-window-background,
+.search-bar {
+    display: block;
+    position: absolute;
+}
+
+.browser-window-header {
+    z-index: 103;
+    width: 100%;
+    height: auto;
+}
+
+.browser-window-header-options {
+    z-index: 104;
+    &:hover {
+        cursor: pointer;
+    }
+    right: 1.85%;
+    top: 0.5%;
+}
+
+.browser-window-background {
+    z-index: 15;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.38);
+}
+
+.search-bar {
+    z-index: 16;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 5%;
+    left: 1.95%;
+    font-family: '8-bit Limit';
+    color: white;
+    font-size: 14px;
+    border: rgba(255, 255, 255, 0.1) thin solid;
+    border-radius: 2px;
+    &:focus {
+        border-color: lightgoldenrodyellow;
+        border-radius: 2px;
+        color: lightgoldenrodyellow;
+    }
+}

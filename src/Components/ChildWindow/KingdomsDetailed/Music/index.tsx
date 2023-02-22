@@ -8,7 +8,10 @@ import { ContentWindowProps } from '../../index';
 
 import Clouds from '../../../Clouds';
 
-function MusicKingdomDetailed({ setLocationSubtitle }: ContentWindowProps) {
+function MusicKingdomDetailed({
+    setLocationSubtitle,
+    handleBrowserContent,
+}: ContentWindowProps) {
     return (
         <div>
             <img
@@ -26,6 +29,7 @@ function MusicKingdomDetailed({ setLocationSubtitle }: ContentWindowProps) {
                 }}
                 onMouseEnter={() => setLocationSubtitle('Melodical Harp')}
                 onMouseLeave={() => setLocationSubtitle('')}
+                onClick={() => handleBrowserContent('melodicalharp.sail')}
             />
 
             <img
@@ -38,12 +42,13 @@ function MusicKingdomDetailed({ setLocationSubtitle }: ContentWindowProps) {
                 }}
                 onMouseEnter={() => setLocationSubtitle(`Collector's Cabin`)}
                 onMouseLeave={() => setLocationSubtitle('')}
+                onClick={() => handleBrowserContent('collectorscabin.sail')}
             />
 
             <Clouds
                 parentHeight={180}
                 parentWidth={324}
-                zIndex={15}
+                zIndex={14}
                 numberOfClouds={8}
             />
         </div>

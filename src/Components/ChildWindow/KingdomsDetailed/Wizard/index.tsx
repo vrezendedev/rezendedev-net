@@ -7,7 +7,10 @@ import { ContentWindowProps } from '../../index';
 
 import Clouds from '../../../Clouds';
 
-function WizardReignDetailed({ setLocationSubtitle }: ContentWindowProps) {
+function WizardReignDetailed({
+    setLocationSubtitle,
+    handleBrowserContent,
+}: ContentWindowProps) {
     return (
         <div>
             <img
@@ -25,12 +28,13 @@ function WizardReignDetailed({ setLocationSubtitle }: ContentWindowProps) {
                 }}
                 onMouseEnter={() => setLocationSubtitle('Towers of Wisdom')}
                 onMouseLeave={() => setLocationSubtitle('')}
+                onClick={() => handleBrowserContent('towersofwisdom.sail')}
             />
 
             <Clouds
                 parentHeight={180}
                 parentWidth={324}
-                zIndex={15}
+                zIndex={14}
                 numberOfClouds={8}
             />
         </div>

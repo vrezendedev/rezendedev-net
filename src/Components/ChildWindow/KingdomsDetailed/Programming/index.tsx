@@ -11,6 +11,7 @@ import Clouds from '../../../Clouds';
 
 function ProgrammingKingdomDetailed({
     setLocationSubtitle,
+    handleBrowserContent,
 }: ContentWindowProps) {
     return (
         <div>
@@ -29,6 +30,7 @@ function ProgrammingKingdomDetailed({
                 }}
                 onMouseEnter={() => setLocationSubtitle(`Code's Dock`)}
                 onMouseLeave={() => setLocationSubtitle('')}
+                onClick={() => handleBrowserContent('codesdock.sail')}
             />
 
             <img
@@ -43,6 +45,9 @@ function ProgrammingKingdomDetailed({
                     setLocationSubtitle('Lighthouse of Technologies')
                 }
                 onMouseLeave={() => setLocationSubtitle('')}
+                onClick={() =>
+                    handleBrowserContent('lighthouseoftechnologies.sail')
+                }
             />
 
             <img
@@ -55,12 +60,13 @@ function ProgrammingKingdomDetailed({
                 }}
                 onMouseEnter={() => setLocationSubtitle(`Web's Ship`)}
                 onMouseLeave={() => setLocationSubtitle('')}
+                onClick={() => handleBrowserContent('websship.sail')}
             />
 
             <Clouds
                 parentHeight={180}
                 parentWidth={324}
-                zIndex={15}
+                zIndex={14}
                 numberOfClouds={8}
             />
         </div>

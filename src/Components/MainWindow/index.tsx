@@ -11,6 +11,7 @@ import Water from '../../Assets/MainWindow/Water.gif';
 import Clouds from '../Clouds';
 import Kingdoms from '../Kingdoms';
 import ChildWindow from '../ChildWindow';
+import Browser from '../BrowserWindow';
 
 type MainWindowProps = {
     isModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -18,9 +19,15 @@ type MainWindowProps = {
 
 function MainWindow(props: MainWindowProps) {
     const [mouseOnHeader, setMouseOnHeader] = useState(false);
+
     const [display, setDisplay] = useState('none');
-    const [kingdomHighlighted, setKingdomHighlighted] = useState(' ');
+    const [displayBrowser, setDisplayBrowser] = useState(false);
+
+    const [kingdomHighlighted, setKingdomHighlighted] = useState('');
     const [kingdomModals, setKingdomModals] = useState<Array<string>>([]);
+
+    const [browserContent, setBrowserContent] = useState('');
+
     const [topModal, setTopModal] = useState('');
 
     useEffect(() => {
@@ -75,6 +82,7 @@ function MainWindow(props: MainWindowProps) {
                     />
 
                     <img className="window-background" src={Window} />
+
                     <img className="water" src={Water} />
 
                     <Clouds
@@ -101,9 +109,20 @@ function MainWindow(props: MainWindowProps) {
                         key={obj}
                         isTopChild={obj == topModal}
                         setTopModal={setTopModal}
+                        setBrowserContent={setBrowserContent}
+                        setDisplayBrowser={setDisplayBrowser}
                     />
                 );
             })}
+
+            {displayBrowser == true ? (
+                <Browser
+                    isTopChild={'browser' == topModal}
+                    setTopModal={setTopModal}
+                    browserContent={browserContent}
+                    setDisplayBrowser={setDisplayBrowser}
+                />
+            ) : null}
         </>
     );
 }

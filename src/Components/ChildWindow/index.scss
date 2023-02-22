@@ -7,8 +7,8 @@
 
 .child-window {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 2.5%;
+    top: 60%;
     user-select: none;
     opacity: 1;
     animation-name: windowFadeIn;
@@ -45,8 +45,8 @@
     &:hover {
         cursor: pointer;
     }
-    right: 3%;
-    top: 2.9%;
+    right: 2.9%;
+    top: 1.25%;
 }
 
 .child-window-background {

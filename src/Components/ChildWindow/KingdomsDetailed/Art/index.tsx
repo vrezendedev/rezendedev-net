@@ -9,7 +9,10 @@ import { ContentWindowProps } from '../../index';
 
 import Clouds from '../../../Clouds';
 
-function ArtKingdomDetailed({ setLocationSubtitle }: ContentWindowProps) {
+function ArtKingdomDetailed({
+    setLocationSubtitle,
+    handleBrowserContent,
+}: ContentWindowProps) {
     return (
         <div>
             <img
@@ -27,6 +30,7 @@ function ArtKingdomDetailed({ setLocationSubtitle }: ContentWindowProps) {
                 }}
                 onMouseEnter={() => setLocationSubtitle('Tower of 2D')}
                 onMouseLeave={() => setLocationSubtitle('')}
+                onClick={() => handleBrowserContent('towerof2d.sail')}
             />
 
             <img
@@ -39,6 +43,7 @@ function ArtKingdomDetailed({ setLocationSubtitle }: ContentWindowProps) {
                 }}
                 onMouseEnter={() => setLocationSubtitle('Castle of 3D')}
                 onMouseLeave={() => setLocationSubtitle('')}
+                onClick={() => handleBrowserContent('castleof3d.sail')}
             />
 
             <img
@@ -51,12 +56,13 @@ function ArtKingdomDetailed({ setLocationSubtitle }: ContentWindowProps) {
                 }}
                 onMouseEnter={() => setLocationSubtitle('Inspiration Village')}
                 onMouseLeave={() => setLocationSubtitle('')}
+                onClick={() => handleBrowserContent('inspirationvillage.sail')}
             />
 
             <Clouds
                 parentHeight={180}
                 parentWidth={324}
-                zIndex={15}
+                zIndex={14}
                 numberOfClouds={8}
             />
         </div>

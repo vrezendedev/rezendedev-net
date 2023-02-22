@@ -30,6 +30,7 @@ type Contents = {
 
 export type ContentWindowProps = {
     setLocationSubtitle: (value: React.SetStateAction<string>) => void;
+    handleBrowserContent: (locationUrl: string) => void;
 };
 
 type ChildWindowProps = {
@@ -37,6 +38,8 @@ type ChildWindowProps = {
     setTopModal: (value: React.SetStateAction<string>) => void;
     childKingdom: string;
     setKingdomModals: (value: React.SetStateAction<string[]>) => void;
+    setDisplayBrowser: (value: React.SetStateAction<boolean>) => void;
+    setBrowserContent: (value: React.SetStateAction<string>) => void;
 };
 
 const KingdomContents: KingdomContent = {
@@ -71,12 +74,19 @@ function ChildWindow({
     setTopModal,
     childKingdom,
     setKingdomModals,
+    setDisplayBrowser,
+    setBrowserContent,
 }: ChildWindowProps) {
     const [mouseOnHeader, setMouseOnHeader] = useState(false);
     const [display, setDisplay] = useState('none');
     const [locationSubtitle, setLocationSubtitle] = useState('');
 
     const Content = KingdomContents[childKingdom].content;
+
+    function handleBrowserContent(locationUrl: string) {
+        setDisplayBrowser(true);
+        setBrowserContent(locationUrl);
+    }
 
     useEffect(() => {
         document.body.style.cursor = 'wait';
@@ -134,7 +144,10 @@ function ChildWindow({
                     draggable={false}
                 />
 
-                <Content setLocationSubtitle={setLocationSubtitle} />
+                <Content
+                    setLocationSubtitle={setLocationSubtitle}
+                    handleBrowserContent={handleBrowserContent}
+                />
 
                 {locationSubtitle != '' ? (
                     <div
