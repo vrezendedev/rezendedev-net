@@ -8,6 +8,8 @@ import BrowserWindow from './../../Assets/BrowserWindow/BrowserWindow.png';
 import BrowserWindowHeader from './../../Assets/BrowserWindow/BrowserWindowHeader.png';
 import BrowserWindowHeaderOptions from './../../Assets/MainWindow/WindowHeaderOptions.png';
 
+import Carousel from '../Carousel';
+
 type BrowserContent =
     | 'towersofwisdom.sail'
     | 'codesdock.sail'
@@ -44,6 +46,11 @@ function Browser({
         }, 1500);
     }, []);
 
+    useEffect(() => {
+        let searchBar = document.getElementById('search-bar');
+        (searchBar as HTMLInputElement).value = browserContent;
+    }, [browserContent]);
+
     return (
         <Draggable
             disabled={!mouseOnHeader}
@@ -65,9 +72,9 @@ function Browser({
             >
                 <input
                     type="text"
+                    id="search-bar"
                     className="search-bar"
                     style={{ width: '510px' }}
-                    value={browserContent}
                 />
 
                 <img
@@ -93,6 +100,8 @@ function Browser({
                     src={BrowserWindow}
                     draggable={false}
                 />
+
+                <Carousel collection={[]} />
             </div>
         </Draggable>
     );
