@@ -11,10 +11,12 @@ import BrowserWindowHeaderOptions from './../../Assets/MainWindow/WindowHeaderOp
 type BrowserContent =
     | 'towersofwisdom.sail'
     | 'codesdock.sail'
+    | 'websship.sail'
     | 'lighthouseoftechnologies.sail'
     | 'melodicalharp.sail'
     | 'collectorscabin.sail'
     | 'pillarsofcreation.sail'
+    | 'utilitarywindmill.sail'
     | 'towerof2d.sail'
     | 'castleof3d.sail'
     | 'inspirationvillage.sail';
