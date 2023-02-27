@@ -1,5 +1,12 @@
+@font-face {
+  font-family: "8-bit Limit";
+  src: url("../../Assets/8-bit-limit.brk.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 .carousel-main {
-  width: 530px;
+  width: 528px;
+  min-height: 130px;
   margin: 0 auto;
   display: flex;
   position: relative;
@@ -7,7 +14,10 @@
   justify-content: center;
   z-index: 17;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px #f5deb3 solid;
+  border-left: none;
+  border-right: none;
 }
 
 .carousel-motion:hover {
@@ -20,7 +30,7 @@
 
 .carousel-item {
   min-height: 30px;
-  min-width: 150px;
+  min-width: 200px;
   display: flex;
   position: relative;
   justify-content: center;
@@ -38,4 +48,36 @@
 .carousel-image:hover {
   cursor: pointer;
   opacity: 1;
+}
+
+.item-subtitle-div {
+  display: block;
+  position: absolute;
+  width: 40%;
+  height: auto;
+  z-index: 103;
+  bottom: 10%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.item-subtitle {
+  margin: 0;
+  padding: 0;
+  font-family: "8-bit Limit";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  opacity: 1;
+  color: white;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+  animation-name: windowFadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  border: 1px wheat solid;
+  border-left: none;
+  border-right: none;
+  pointer-events: none;
 }/*# sourceMappingURL=index.css.map */

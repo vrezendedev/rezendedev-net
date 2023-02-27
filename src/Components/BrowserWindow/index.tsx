@@ -8,8 +8,6 @@ import BrowserWindow from './../../Assets/BrowserWindow/BrowserWindow.png';
 import BrowserWindowHeader from './../../Assets/BrowserWindow/BrowserWindowHeader.png';
 import BrowserWindowHeaderOptions from './../../Assets/MainWindow/WindowHeaderOptions.png';
 
-import Carousel from '../Carousel';
-
 type BrowserContent =
     | 'towersofwisdom.sail'
     | 'codesdock.sail'
@@ -73,6 +71,7 @@ function Browser({
                 <input
                     type="text"
                     id="search-bar"
+                    spellCheck={false}
                     className="search-bar"
                     style={{ width: '510px' }}
                 />
@@ -100,8 +99,6 @@ function Browser({
                     src={BrowserWindow}
                     draggable={false}
                 />
-
-                <Carousel collection={[]} />
             </div>
         </Draggable>
     );
