@@ -1,0 +1,80 @@
+.carousel-arrowed-main-div {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 17;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px #f5deb3 solid;
+    border-left: none;
+    border-right: none;
+}
+
+.carousel-arrowed-image-displaying {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.arrows {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.animate-carousel-image-left {
+    animation-name: slideLeft;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.75s;
+}
+
+.animate-carousel-image-right {
+    animation-name: slideRight;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.75s;
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        translate: 100%;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0%;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        translate: -100%;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0%;
+    }
+}

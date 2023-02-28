@@ -101,6 +101,14 @@ function Browser({
                     src={BrowserWindow}
                     draggable={false}
                 />
+                <div
+                    style={{
+                        display: 'block',
+                        position: 'absolute',
+                        left: '35%',
+                        bottom: '50%',
+                    }}
+                ></div>
             </div>
         </Draggable>
     );

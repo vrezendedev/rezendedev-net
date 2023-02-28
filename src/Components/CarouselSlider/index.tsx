@@ -3,18 +3,18 @@ import { motion } from 'framer-motion';
 
 import './index.css';
 
-export type Item = {
+export type CarouselSliderItem = {
     title: string;
     content: string;
     onClick: () => void;
 };
 
-type CarouselProps = {
+type CarouselSliderProps = {
     itemsType: '2D' | '3D';
-    collection: Array<Item>;
+    collection: Array<CarouselSliderItem>;
 };
 
-function Carousel({ itemsType, collection }: CarouselProps) {
+function CarouselSlider({ itemsType, collection }: CarouselSliderProps) {
     const [mouseOnContent, setMouseOnContent] = useState(false);
     const [displaySubtitle, setDisplaySubtitle] = useState('');
     const carousel = useRef<HTMLDivElement | null>(null);
@@ -93,4 +93,4 @@ function Carousel({ itemsType, collection }: CarouselProps) {
     );
 }
 
-export default Carousel;
+export default CarouselSlider;
