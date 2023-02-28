@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "8-bit Limit";
+  src: url("../../Assets/8-bit-limit.brk.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+.windmill-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 17;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px white solid;
+  border-radius: 50%;
+}
+
+.windmill-item {
+  display: block;
+  position: absolute;
+  z-index: 18;
+  border: 2px white solid;
+  border-radius: 75%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: rotate360 6s infinite linear;
+}
+.windmill-item:hover {
+  cursor: pointer;
+}
+
+.windmill-subtitle {
+  display: block;
+  position: absolute;
+  width: 60%;
+  z-index: 18;
+  bottom: 37%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.windmill-item-subtitle {
+  font-family: "8-bit Limit";
+  font-size: 20px;
+  padding: 4px;
+  opacity: 1;
+  color: lightgoldenrodyellow;
+  animation-name: windowFadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  border: 1px wheat solid;
+  border-left: none;
+  border-right: none;
+}
+
+@keyframes rotate360 {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}/*# sourceMappingURL=index.css.map */

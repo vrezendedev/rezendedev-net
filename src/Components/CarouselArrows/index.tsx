@@ -21,7 +21,7 @@ function CarouselArrowed({
 }: CarouselArrowedProps) {
     const [imageDisplaying, setImageDisplaying] = useState(0);
     const [lastDirection, setLastDirection] = useState<'left' | 'right'>(
-        'left'
+        'right'
     );
 
     function SetImage(direction: 'left' | 'right') {
@@ -48,10 +48,12 @@ function CarouselArrowed({
             image.classList.remove('animate-carousel-image-left');
             image.classList.remove('animate-carousel-image-right');
             setTimeout(() => {
-                if (lastDirection == 'right') {
-                    image?.classList.add('animate-carousel-image-right');
-                } else {
-                    image?.classList.add('animate-carousel-image-left');
+                if (image != null) {
+                    if (lastDirection == 'right') {
+                        image.classList.add('animate-carousel-image-right');
+                    } else {
+                        image.classList.add('animate-carousel-image-left');
+                    }
                 }
             }, 1);
         }
@@ -79,6 +81,7 @@ function CarouselArrowed({
                 src={collection[imageDisplaying]}
                 style={{ width: imgWidth, height: imgHeight }}
             />
+
             <img
                 src={Arrow}
                 style={{
@@ -93,6 +96,23 @@ function CarouselArrowed({
                 onClick={() => SetImage('right')}
                 draggable={false}
             />
+            <div className="carousel-images-list">
+                {collection.map((obj, index) => {
+                    return (
+                        <input
+                            type="radio"
+                            key={index}
+                            checked={index == imageDisplaying ? true : false}
+                            style={{
+                                opacity: index == imageDisplaying ? 1 : 0.05,
+                            }}
+                            value={index}
+                            className="carousel-images-list-radio"
+                            onClick={() => setImageDisplaying(index)}
+                        />
+                    );
+                })}
+            </div>
         </div>
     );
 }

@@ -74,6 +74,7 @@ function Browser({
                     type="text"
                     id="search-bar"
                     spellCheck={false}
+                    autoComplete="off"
                     className="search-bar"
                     style={{ width: '510px' }}
                 />
@@ -101,14 +102,6 @@ function Browser({
                     src={BrowserWindow}
                     draggable={false}
                 />
-                <div
-                    style={{
-                        display: 'block',
-                        position: 'absolute',
-                        left: '35%',
-                        bottom: '50%',
-                    }}
-                ></div>
             </div>
         </Draggable>
     );

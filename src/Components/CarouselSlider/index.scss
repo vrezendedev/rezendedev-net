@@ -16,7 +16,7 @@
     z-index: 17;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.5);
-    border: 1px #f5deb3 solid;
+    border: 1px white solid;
     border-left: none;
     border-right: none;
 }
@@ -61,7 +61,6 @@
     z-index: 103;
     bottom: 10%;
     text-align: center;
-
     pointer-events: none;
 }
 
@@ -73,7 +72,7 @@
     font-style: normal;
     font-size: 16px;
     opacity: 1;
-    color: white;
+    color: lightgoldenrodyellow;
     padding: 4px;
     background-color: rgba(0, 0, 0, 0.15);
     animation-name: windowFadeIn;
