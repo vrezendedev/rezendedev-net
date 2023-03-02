@@ -6,16 +6,13 @@
     z-index: 17;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.5);
-    border: 1px white solid;
-    border-left: none;
-    border-right: none;
 }
 
 .carousel-arrowed-image-displaying {
     display: block;
     width: 100%;
     height: auto;
-    margin: 10px;
+    margin: 5px;
     margin-top: 0;
     margin-bottom: 0;
     object-fit: cover;

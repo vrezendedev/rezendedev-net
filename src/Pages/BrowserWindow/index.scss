@@ -52,15 +52,15 @@
     padding: 4px;
     background-color: rgba(0, 0, 0, 0.5);
     top: 5%;
-    left: 1.7%;
+    left: 1.8%;
     font-family: '8-bit Limit';
-    color: white;
+    color: lightgoldenrodyellow;
     font-size: 14px;
     border: rgba(255, 255, 255, 0.1) thin solid;
     border-radius: 2px;
     &:focus {
         border-color: lightgoldenrodyellow;
         border-radius: 2px;
-        color: lightgoldenrodyellow;
+        color: white;
     }
 }

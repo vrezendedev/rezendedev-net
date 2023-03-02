@@ -4,7 +4,7 @@ import Icon from './Assets/Desktop/Icon.png';
 
 import './main.css';
 
-import MainWindow from './Components/MainWindow';
+import MainWindow from './Pages/MainWindow';
 
 function App() {
     const [selected, setSelected] = useState(false);

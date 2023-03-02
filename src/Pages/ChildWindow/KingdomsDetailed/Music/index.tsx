@@ -6,7 +6,7 @@ import MusicKingdomDetailedCabin from '../../../../Assets/ChildWindow/Kingdoms/M
 
 import { ContentWindowProps } from '../../index';
 
-import Clouds from '../../../Clouds';
+import Clouds from './../../../../Components/Clouds';
 
 function MusicKingdomDetailed({
     setLocationSubtitle,

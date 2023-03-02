@@ -6,7 +6,7 @@ import GameDevKingdomDetailedWindmill from '../../../../Assets/ChildWindow/Kingd
 
 import { ContentWindowProps } from '../../index';
 
-import Clouds from '../../../Clouds';
+import Clouds from './../../../../Components/Clouds';
 
 function GameDevKingdomDetailed({
     setLocationSubtitle,

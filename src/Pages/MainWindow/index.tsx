@@ -8,7 +8,7 @@ import WindowHeader from '../../Assets/MainWindow/WindowHeader.png';
 import WindowHeaderOptions from '../../Assets/MainWindow/WindowHeaderOptions.png';
 import Water from '../../Assets/MainWindow/Water.gif';
 
-import Clouds from '../Clouds';
+import Clouds from './../../Components/Clouds';
 import Kingdoms from '../Kingdoms';
 import ChildWindow from '../ChildWindow';
 import Browser from '../BrowserWindow';

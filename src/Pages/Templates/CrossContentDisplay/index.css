@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "8-bit Limit";
+  src: url("../../Assets/8-bit-limit.brk.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+.cross-content-main {
+  display: block;
+  position: absolute;
+  z-index: 17;
+  width: 519px;
+  height: 435px;
+  top: 10.5%;
+  left: 1.7%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.cross-content-title {
+  display: block;
+  position: absolute;
+  width: 496px;
+  margin: 0;
+  top: 0.36%;
+  left: 0.74%;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-right: 0;
+  font-family: "8-bit Limit";
+  font-size: 18px;
+  color: lightgoldenrodyellow;
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cross-content-title::first-letter {
+  font-size: 24px;
+}
+
+.cross-item {
+  display: flex;
+  position: relative;
+  top: 7%;
+  margin-top: 4px;
+  margin-right: 4px;
+}
+
+.cross-text-content {
+  font-family: "8-bit Limit";
+  text-align: justify;
+  color: lightgoldenrodyellow;
+  width: 280px;
+  height: 210px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 5px;
+  padding-right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cross-item-title {
+  font-size: 16px;
+  border-bottom: 1px wheat solid;
+  margin-bottom: 0;
+}
+.cross-item-title::first-letter {
+  font-size: 20px;
+}
+
+.cross-item-text {
+  font-size: 14px;
+  line-height: 1.25;
+  margin-top: 10px;
+}
+
+.cross-item-reverse {
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  left: 0.64%;
+}/*# sourceMappingURL=index.css.map */

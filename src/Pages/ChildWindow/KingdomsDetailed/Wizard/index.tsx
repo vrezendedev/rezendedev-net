@@ -5,7 +5,7 @@ import WizardReignDetailedTowers from '../../../../Assets/ChildWindow/Kingdoms/W
 
 import { ContentWindowProps } from '../../index';
 
-import Clouds from '../../../Clouds';
+import Clouds from './../../../../Components/Clouds';
 
 function WizardReignDetailed({
     setLocationSubtitle,

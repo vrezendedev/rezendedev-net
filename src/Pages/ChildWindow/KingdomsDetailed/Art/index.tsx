@@ -7,7 +7,7 @@ import ArtKingdomDetailedVillage from '../../../../Assets/ChildWindow/Kingdoms/A
 
 import { ContentWindowProps } from '../../index';
 
-import Clouds from '../../../Clouds';
+import Clouds from './../../../../Components/Clouds';
 
 function ArtKingdomDetailed({
     setLocationSubtitle,

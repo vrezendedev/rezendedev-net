@@ -37,4 +37,13 @@
 }
 .icon:hover {
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: wheat;
 }/*# sourceMappingURL=main.css.map */

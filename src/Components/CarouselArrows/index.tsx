@@ -10,6 +10,7 @@ type CarouselArrowedProps = {
     mainDivHeight: string;
     imgWidth: string;
     imgHeight: string;
+    id: string;
 };
 
 function CarouselArrowed({
@@ -18,6 +19,7 @@ function CarouselArrowed({
     mainDivHeight,
     imgWidth,
     imgHeight,
+    id,
 }: CarouselArrowedProps) {
     const [imageDisplaying, setImageDisplaying] = useState(0);
     const [lastDirection, setLastDirection] = useState<'left' | 'right'>(
@@ -43,7 +45,7 @@ function CarouselArrowed({
     }
 
     useEffect(() => {
-        let image = document.getElementById('carousel-image-displaying');
+        let image = document.getElementById(id);
         if (image != null) {
             image.classList.remove('animate-carousel-image-left');
             image.classList.remove('animate-carousel-image-right');
@@ -63,6 +65,7 @@ function CarouselArrowed({
         <div
             className="carousel-arrowed-main-div"
             style={{ width: mainDivWidth, height: mainDivHeight }}
+            key={Math.random()}
         >
             <img
                 src={Arrow}
@@ -76,7 +79,7 @@ function CarouselArrowed({
             />
             <img
                 className="carousel-arrowed-image-displaying"
-                id="carousel-image-displaying"
+                id={id}
                 draggable={false}
                 src={collection[imageDisplaying]}
                 style={{ width: imgWidth, height: imgHeight }}
@@ -101,8 +104,9 @@ function CarouselArrowed({
                     return (
                         <input
                             type="radio"
-                            key={index}
                             checked={index == imageDisplaying ? true : false}
+                            onChange={() => {}}
+                            key={index}
                             style={{
                                 opacity: index == imageDisplaying ? 1 : 0.05,
                             }}
