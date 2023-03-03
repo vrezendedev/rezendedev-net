@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import './index.css';
@@ -6,15 +6,22 @@ import './index.css';
 export type CarouselSliderItem = {
     title: string;
     content: string;
+    width: string;
+    height: string;
     onClick: () => void;
 };
 
-type CarouselSliderProps = {
+export type CarouselSliderProps = {
     itemsType: '2D' | '3D';
+    sliderHeight: string;
     collection: Array<CarouselSliderItem>;
 };
 
-function CarouselSlider({ itemsType, collection }: CarouselSliderProps) {
+function CarouselSlider({
+    itemsType,
+    collection,
+    sliderHeight,
+}: CarouselSliderProps) {
     const [mouseOnContent, setMouseOnContent] = useState(false);
     const [displaySubtitle, setDisplaySubtitle] = useState('');
     const carousel = useRef<HTMLDivElement | null>(null);
@@ -26,6 +33,10 @@ function CarouselSlider({ itemsType, collection }: CarouselSliderProps) {
                     <img
                         alt={item.title}
                         src={item.content}
+                        style={{
+                            width: item.width,
+                            height: item.height,
+                        }}
                         className="carousel-image"
                         draggable={false}
                         onMouseOver={() => {
@@ -52,6 +63,7 @@ function CarouselSlider({ itemsType, collection }: CarouselSliderProps) {
                     key={item.title}
                     onMouseOver={() => setDisplaySubtitle(item.title)}
                     onMouseLeave={() => setDisplaySubtitle('')}
+                    style={{ maxWidth: item.width, maxHeight: item.height }}
                 >
                     {/*@ts-expect-error*/}
                     <model-viewer
@@ -82,8 +94,9 @@ function CarouselSlider({ itemsType, collection }: CarouselSliderProps) {
                 dragConstraints={carousel}
                 drag={mouseOnContent == false ? 'x' : false}
                 initial={{ x: 500 }}
-                animate={{ x: 100 }}
+                animate={{ x: 150 }}
                 transition={{ duration: 0.8, delay: 1.5 }}
+                style={{ height: sliderHeight }}
             >
                 <motion.div className="carousel-items">
                     {RenderCarouselItems()}

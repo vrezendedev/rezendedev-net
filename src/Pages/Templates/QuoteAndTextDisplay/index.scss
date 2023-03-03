@@ -1,0 +1,101 @@
+@font-face {
+    font-family: '8-bit Limit';
+    src: url('../../../Assets/8-bit-limit.brk.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.quote-text-content-main {
+    display: block;
+    position: absolute;
+    z-index: 17;
+    width: 519px;
+    height: 435px;
+    top: 10.5%;
+    left: 1.7%;
+}
+
+.quote-text-quote-div {
+    font-family: '8-bit Limit';
+    font-size: 18px;
+    font-style: italic;
+    color: lightgoldenrodyellow;
+}
+
+.quote-text-quote {
+    display: block;
+    position: absolute;
+    width: 500px;
+    margin: 0;
+    top: 0.36%;
+    left: 0.21%;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 8px;
+    &::first-letter {
+        font-size: 24px;
+    }
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.38);
+}
+
+.quote-text-author {
+    display: block;
+    position: absolute;
+    width: 505px;
+    margin: 0;
+    top: 11.3%;
+    left: 0.21%;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 8px;
+    text-align: right;
+    font-style: normal;
+    font-size: 16px;
+    &::first-letter {
+        font-size: 20px;
+    }
+}
+
+.quote-text-text-div {
+    font-family: '8-bit Limit';
+    color: lightgoldenrodyellow;
+    font-size: 16px;
+}
+
+.quote-text-text-title {
+    display: block;
+    position: absolute;
+    width: 505px;
+    top: 15%;
+    left: 0.38%;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 8px;
+    border: 1px solid white;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    &::first-letter {
+        font-size: 20px;
+    }
+}
+
+.quote-text-text-content {
+    display: block;
+    position: absolute;
+    text-align: justify;
+    height: 318px;
+    top: 22%;
+    left: 0.26%;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 8px;
+    border: 1px solid white;
+    border-left: 0;
+    border-right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    &::first-letter {
+        font-size: 20px;
+    }
+}

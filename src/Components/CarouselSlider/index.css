@@ -5,7 +5,7 @@
   font-style: normal;
 }
 .carousel-main {
-  width: 528px;
+  width: 519px;
   min-height: 130px;
   margin: 0 auto;
   display: flex;
@@ -20,6 +20,11 @@
   border-right: none;
 }
 
+.carousel-motion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .carousel-motion:hover {
   cursor: grab;
 }
@@ -29,8 +34,8 @@
 }
 
 .carousel-item {
-  min-height: 30px;
-  min-width: 200px;
+  margin-left: 40px;
+  margin-right: 40px;
   display: flex;
   position: relative;
   justify-content: center;
@@ -53,10 +58,10 @@
 .item-subtitle-div {
   display: block;
   position: absolute;
-  width: 40%;
+  width: 70%;
   height: auto;
   z-index: 103;
-  bottom: 10%;
+  bottom: 2%;
   text-align: center;
   pointer-events: none;
 }
