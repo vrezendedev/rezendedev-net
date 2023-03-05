@@ -9,6 +9,7 @@ export type WindmillCollectionItems = {
 
 type WindmillProps = {
     collection: Array<WindmillCollectionItems>;
+    setItemSelected: (value: string) => void;
     imgWidth: string;
     imgHeight: string;
     circleRadius: number;
@@ -19,6 +20,7 @@ function Windmill({
     imgWidth,
     imgHeight,
     circleRadius,
+    setItemSelected,
 }: WindmillProps) {
     const [currentSubtitle, setCurrentSubtitle] = useState('');
 
@@ -47,9 +49,11 @@ function Windmill({
                         draggable={false}
                         onClick={() => {
                             if (currentSubtitle != obj.subtitle) {
-                                setCurrentSubtitle(' ');
+                                setCurrentSubtitle('');
+                                setItemSelected('');
                                 setTimeout(() => {
                                     setCurrentSubtitle(obj.subtitle);
+                                    setItemSelected(obj.subtitle);
                                 }, 150);
                             }
                         }}
@@ -57,7 +61,7 @@ function Windmill({
                 );
             })}
             <div className="windmill-subtitle">
-                {currentSubtitle != ' ' ? (
+                {currentSubtitle != '' ? (
                     <p
                         className="windmill-item-subtitle"
                         style={{ opacity: 1 }}

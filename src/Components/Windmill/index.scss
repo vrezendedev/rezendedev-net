@@ -34,7 +34,7 @@
     position: absolute;
     width: 60%;
     z-index: 18;
-    bottom: 37%;
+    bottom: 35%;
     text-align: center;
     pointer-events: none;
 }
@@ -52,6 +52,7 @@
     border: 1px wheat solid;
     border-left: none;
     border-right: none;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 @keyframes rotate360 {

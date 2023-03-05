@@ -1,0 +1,70 @@
+.utilitary-windmill-main {
+  display: block;
+  position: absolute;
+  width: 519px;
+  height: 435px;
+  top: 10.5%;
+  left: 1.7%;
+  z-index: 17;
+}
+
+.utilitary-windmill-content {
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.utilitary-windmill-text-content {
+  display: block;
+  position: absolute;
+  bottom: 27%;
+  left: 0.21%;
+  font-family: "8-bit Limit";
+  font-size: 16px;
+  color: lightgoldenrodyellow;
+}
+
+.utilitary-windmill-title {
+  width: 505px;
+  top: 97%;
+  left: 0.38%;
+  margin-bottom: 0;
+  padding-top: 2px;
+  padding-left: 5px;
+  padding-right: 8px;
+  border: 1px solid white;
+  border-left: 0;
+  border-right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.utilitary-windmill-title::first-letter {
+  font-size: 20px;
+}
+
+.utilitary-windmill-text-div {
+  display: block;
+  position: absolute;
+  width: 518px;
+  height: 114px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: 1px solid white;
+  border-left: 0;
+  border-right: 0;
+  text-align: justify;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.utilitary-windmill-text {
+  margin: 0;
+  padding: 5px;
+  padding-bottom: 7px;
+  animation-name: windowFadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.3s;
+}
+.utilitary-windmill-text::first-letter {
+  font-size: 20px;
+}/*# sourceMappingURL=index.css.map */
