@@ -1,0 +1,71 @@
+@font-face {
+    font-family: '8-bit Limit';
+    src: url('../../Assets/8-bit-limit.brk.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#first-item-div {
+    height: 138px;
+}
+
+.lighthouse-content-main {
+    display: block;
+    position: absolute;
+    width: 518px;
+    height: 435px;
+    top: 10.5%;
+    left: 2.1%;
+    z-index: 17;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.lighthouse-content {
+    display: flex;
+    position: relative;
+    z-index: 17;
+}
+
+.lighthouse-text-div {
+    font-family: '8-bit Limit';
+    color: lightgoldenrodyellow;
+    margin-top: 5px;
+}
+
+.lighthouse-title {
+    width: 318px;
+    margin: 0;
+    margin-right: 5px;
+    top: 0.36%;
+    padding-top: 3px;
+    padding-right: 0;
+    padding-left: 10px;
+    font-size: 18px;
+    &::first-letter {
+        font-size: 24px;
+    }
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lighthouse-text {
+    width: 318px;
+    height: 97px;
+    margin: 0;
+    margin-top: 4px;
+    margin-right: 5px;
+    top: 0.36%;
+    padding-top: 3px;
+    padding-right: 0;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-size: 14;
+    &::first-letter {
+        font-size: 16px;
+    }
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lighthouse-carousel {
+    margin-top: 5px;
+}

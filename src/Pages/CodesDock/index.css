@@ -123,4 +123,36 @@
   outline: 2px dashed white;
   border: none;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.item-courses,
+.item-misc,
+.item-currently {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  font-family: "8-bit Limit";
+  font-size: 12px;
+  color: lightgoldenrodyellow;
+  animation-name: windowFadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+.item-courses {
+  left: 27.8%;
+  top: 35%;
+}
+
+.item-misc {
+  left: 57.1%;
+  top: 35%;
+}
+
+.item-currently {
+  right: 4.5%;
+  top: 35%;
 }/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "8-bit Limit";
+  src: url("../../Assets/8-bit-limit.brk.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+.tower-wisdom-content-main {
+  display: block;
+  position: absolute;
+  width: 518px;
+  height: 435px;
+  top: 10.5%;
+  left: 2.1%;
+  z-index: 17;
+}
+
+.tower-wisdom-content-title {
+  display: block;
+  position: absolute;
+  width: 507px;
+  margin: 0;
+  top: 0.36%;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-right: 0;
+  font-family: "8-bit Limit";
+  font-size: 18px;
+  color: lightgoldenrodyellow;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.tower-wisdom-content-title::first-letter {
+  font-size: 24px;
+}
+
+.tower-wisdom-text-div {
+  font-family: "8-bit Limit";
+  color: lightgoldenrodyellow;
+  font-size: 16px;
+}
+
+.tower-wisdom-text-content {
+  display: block;
+  position: absolute;
+  text-align: justify;
+  height: 305px;
+  width: 503px;
+  top: 5%;
+  left: 0.2%;
+  padding-top: 2px;
+  padding-left: 5px;
+  padding-right: 8px;
+  border: 1px solid white;
+  border-left: 0;
+  border-right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.tower-wisdom-text-content::first-letter {
+  font-size: 20px;
+}
+
+.tower-wisdom-images {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  margin-top: 360px;
+}
+.tower-wisdom-images img {
+  width: 64px;
+  height: 64px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px dashed white;
+  border-left: 0;
+  border-right: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.tower-wisdom-images img:hover {
+  cursor: pointer;
+  outline: 2px dashed white;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.item-pt-br,
+.item-en-us {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  font-family: "8-bit Limit";
+  font-size: 12px;
+  color: lightgoldenrodyellow;
+  animation-name: windowFadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+.item-pt-br {
+  left: 38%;
+  top: 32%;
+}
+
+.item-en-us {
+  left: 76.8%;
+  top: 32%;
+}/*# sourceMappingURL=index.css.map */

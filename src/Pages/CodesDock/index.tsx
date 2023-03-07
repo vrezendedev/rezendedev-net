@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import './index.css';
 
 import CourseRepo from './../../Assets/Icons/CourseRepo.png';
@@ -5,6 +7,8 @@ import MiscRepo from './../../Assets/Icons/MiscRepo.png';
 import CurrentlyWorkingRepo from './../../Assets/Icons/CurrentlyWorkingRepo.png';
 
 function CodesDock() {
+    const [displayImageText, SetDisplayImageText] = useState('');
+
     return (
         <div className="codes-dock-content-main">
             <div className="codes-dock-quote-div">
@@ -17,27 +21,65 @@ function CodesDock() {
             </div>
             <div className="codes-dock-text-div">
                 <p className="codes-dock-text-title">Fishing Repositories</p>
-                <p className="codes-dock-text-content">
-                    Bacon ipsum dolor amet chislic ribeye cupim chicken,
-                    prosciutto pork pork chop chuck kevin brisket hamburger.
-                    Bresaola porchetta cupim, pork strip steak salami spare ribs
-                    meatloaf ham hock doner pastrami sausage turkey andouille.
-                    Short ribs bresaola frankfurter pork chop spare ribs venison
-                    beef ribs sausage pork loin pork. Ham hock porchetta
-                    shoulder ham cupim doner prosciutto meatball. Bacon ipsum
-                    dolor amet chislic ribeye cupim chicken, prosciutto pork
-                    pork chop chuck kevin brisket hamburger. Bresaola porchetta
-                    cupim, pork strip steak salami spare ribs meatloaf ham hock
-                    doner pastrami sausage turkey andouille. Short ribs bresaola
-                    frankfurter pork chop spare ribs venison beef ribs sausage
-                    pork loin pork. Ham hock porchetta shoulder ham cupim doner
-                    prosciutto meatball.
-                </p>
+                <p className="codes-dock-text-content"></p>
             </div>
             <div className="codes-dock-images">
-                <img src={CourseRepo} draggable={false} />
-                <img src={MiscRepo} draggable={false} />
-                <img src={CurrentlyWorkingRepo} draggable={false} />
+                <img
+                    src={CourseRepo}
+                    draggable={false}
+                    onMouseOver={() => {
+                        SetDisplayImageText('courses');
+                    }}
+                    onMouseLeave={() => {
+                        SetDisplayImageText('');
+                    }}
+                    onClick={() => {
+                        open(
+                            'https://github.com/vrezendedev/courses',
+                            '_blank'
+                        );
+                    }}
+                />
+                {displayImageText == 'courses' ? (
+                    <p className="item-courses">Courses Repository</p>
+                ) : null}
+
+                <img
+                    src={MiscRepo}
+                    draggable={false}
+                    onMouseOver={() => {
+                        SetDisplayImageText('misc');
+                    }}
+                    onMouseLeave={() => {
+                        SetDisplayImageText('');
+                    }}
+                    onClick={() => {
+                        open('https://github.com/vrezendedev/misc', '_blank');
+                    }}
+                />
+                {displayImageText == 'misc' ? (
+                    <p className="item-misc">Misc Repository</p>
+                ) : null}
+
+                <img
+                    src={CurrentlyWorkingRepo}
+                    draggable={false}
+                    onMouseOver={() => {
+                        SetDisplayImageText('currently');
+                    }}
+                    onMouseLeave={() => {
+                        SetDisplayImageText('');
+                    }}
+                    onClick={() => {
+                        open(
+                            'https://github.com/vrezendedev/rezendedev-net',
+                            '_blank'
+                        );
+                    }}
+                />
+                {displayImageText == 'currently' ? (
+                    <p className="item-currently">Currently working...</p>
+                ) : null}
             </div>
         </div>
     );
