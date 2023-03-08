@@ -21,7 +21,22 @@ function CodesDock() {
             </div>
             <div className="codes-dock-text-div">
                 <p className="codes-dock-text-title">Fishing Repositories</p>
-                <p className="codes-dock-text-content"></p>
+                <p className="codes-dock-text-content">
+                    Organization is very important and my GitHub didn't escape
+                    from it. If you want to check the code that I write along
+                    courses or something like that, check out my "courses"
+                    repository. The "misc" repository is the lair for different
+                    and small software ideas. Finally, if you want to check the
+                    currently project/repository that I'm working on, press the
+                    start button below. About the "courses" repository, I don't
+                    like to simply copy things so at the end of each project I
+                    tend to increment it a bit. To avoid creating one single
+                    repository for micro projects, I decided to create a major
+                    repo for it, it's not the best practice but, well, it seemed
+                    right. Maybe the current project that I'm working is not
+                    publicly available but I'll always update the link for the
+                    latest one.
+                </p>
             </div>
             <div className="codes-dock-images">
                 <img

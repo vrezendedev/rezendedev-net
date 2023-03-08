@@ -121,6 +121,7 @@ function MainWindow(props: MainWindowProps) {
                     setTopModal={setTopModal}
                     browserContent={browserContent}
                     setDisplayBrowser={setDisplayBrowser}
+                    setBrowserContent={setBrowserContent}
                 />
             ) : null}
         </>

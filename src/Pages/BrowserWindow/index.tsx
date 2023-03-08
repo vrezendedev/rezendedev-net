@@ -7,6 +7,11 @@ import Draggable from 'react-draggable';
 import BrowserWindow from './../../Assets/BrowserWindow/BrowserWindow.png';
 import BrowserWindowHeader from './../../Assets/BrowserWindow/BrowserWindowHeader.png';
 import BrowserWindowHeaderOptions from './../../Assets/MainWindow/WindowHeaderOptions.png';
+import Loading from './../../Assets/Icons/Loading.png';
+
+import CodesDock from '../CodesDock';
+import TowerOfWisdom from '../TowerOfWisdom';
+import LighthouseOfTech from '../LighthouseOfTech';
 
 type BrowserContent =
     | 'towersofwisdom.sail'
@@ -21,11 +26,26 @@ type BrowserContent =
     | 'castleof3d.sail'
     | 'inspirationvillage.sail';
 
+const BrowserContents: Array<BrowserContent | string> = [
+    'castleof3d.sail',
+    'codesdock.sail',
+    'collectorscabin.sail',
+    'inspirationvillage.sail',
+    'lighthouseoftechnologies.sail',
+    'melodicalharp.sail',
+    'pillarsofcreation.sail',
+    'towerof2d.sail',
+    'towersofwisdom.sail',
+    'utilitarywindmill.sail',
+    'websship.sail',
+];
+
 type BrowserProps = {
     isTopChild: boolean;
     browserContent: string;
     setTopModal: (value: React.SetStateAction<string>) => void;
     setDisplayBrowser: (value: React.SetStateAction<boolean>) => void;
+    setBrowserContent: (value: React.SetStateAction<string>) => void;
 };
 
 function Browser({
@@ -33,12 +53,29 @@ function Browser({
     setTopModal,
     setDisplayBrowser,
     browserContent,
+    setBrowserContent,
 }: BrowserProps) {
     const [mouseOnHeader, setMouseOnHeader] = useState(false);
     const [display, setDisplay] = useState('none');
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         document.body.style.cursor = 'wait';
+
+        function HandleOnChangeSearchBar(e: any) {
+            setIsLoading(true);
+            setBrowserContent(e.target.value);
+        }
+
+        let searchBar = document.getElementById('search-bar');
+        (searchBar as HTMLInputElement).removeEventListener(
+            'input',
+            HandleOnChangeSearchBar
+        );
+        (searchBar as HTMLInputElement).addEventListener(
+            'input',
+            HandleOnChangeSearchBar
+        );
 
         setTimeout(() => {
             document.body.style.cursor = 'default';
@@ -47,9 +84,32 @@ function Browser({
     }, []);
 
     useEffect(() => {
+        setIsLoading(true);
         let searchBar = document.getElementById('search-bar');
         (searchBar as HTMLInputElement).value = browserContent;
+
+        if (BrowserContents.includes(browserContent)) {
+            document.body.style.cursor = 'wait';
+            setTimeout(() => {
+                setIsLoading(false);
+                document.body.style.cursor = 'default';
+            }, 2000);
+        }
     }, [browserContent]);
+
+    function switchBrowserContent() {
+        if (isLoading == true) return null;
+        switch (browserContent as BrowserContent) {
+            case 'codesdock.sail':
+                return <CodesDock />;
+            case 'lighthouseoftechnologies.sail':
+                return <LighthouseOfTech />;
+            case 'towersofwisdom.sail':
+                return <TowerOfWisdom />;
+            default:
+                return null;
+        }
+    }
 
     return (
         <Draggable
@@ -102,6 +162,15 @@ function Browser({
                     src={BrowserWindow}
                     draggable={false}
                 />
+
+                <img
+                    src={Loading}
+                    className="loading-img"
+                    draggable={false}
+                    style={{ opacity: isLoading == false ? 0 : 1 }}
+                />
+
+                {isLoading == false ? switchBrowserContent() : null}
             </div>
         </Draggable>
     );
