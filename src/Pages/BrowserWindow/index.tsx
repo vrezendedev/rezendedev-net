@@ -9,9 +9,24 @@ import BrowserWindowHeader from './../../Assets/BrowserWindow/BrowserWindowHeade
 import BrowserWindowHeaderOptions from './../../Assets/MainWindow/WindowHeaderOptions.png';
 import Loading from './../../Assets/Icons/Loading.png';
 
+import CountrysidingOne from './../../Assets/Misc/Countrysiding_01.png';
+import CountrysidingTwo from './../../Assets/Misc/Countrysiding_02.png';
+import CountrysidingThree from './../../Assets/Misc/Countrysiding_03.png';
+
+import BobRossOne from './../../Assets/Misc//BobRoss_01.jpg';
+import BobRossTwo from './../../Assets/Misc//BobRoss_02.jpg';
+
+import SketchyOne from './../../Assets/Misc/SketchyBird_01.png';
+import SketchyTwo from './../../Assets/Misc/SketchyBird_02.gif';
+
+import SandtideOne from './../../Assets/Misc/Sandtide_01.png';
+import SandtideTwo from './../../Assets/Misc/Sandtide_02.png';
+
 import CodesDock from '../CodesDock';
 import TowerOfWisdom from '../TowerOfWisdom';
 import LighthouseOfTech from '../LighthouseOfTech';
+import CrossContentDisplay from '../Templates/CrossContentDisplay';
+import UtilitaryWindmill from '../UtilitaryWindmill';
 
 type BrowserContent =
     | 'towersofwisdom.sail'
@@ -104,8 +119,68 @@ function Browser({
                 return <CodesDock />;
             case 'lighthouseoftechnologies.sail':
                 return <LighthouseOfTech />;
+            case 'websship.sail':
+                return (
+                    <CrossContentDisplay
+                        title={`Ships that already sailed away and it's stories:`}
+                        items={[
+                            {
+                                title: 'countrysiding.net',
+                                text: `It was my first website and back in the days I only knew HTML and CSS/SASS. It was blast for me when I deployed the website, afterall, 
+                                    it was my first finished project. Simple projects are key for evolving our habilities as developers in the beginning. I have plans to redo the entire website after developing more of the game.`,
+                                images: [
+                                    CountrysidingOne,
+                                    CountrysidingTwo,
+                                    CountrysidingThree,
+                                ],
+                                onClick: () => {
+                                    open(
+                                        'https://countrysiding.net/',
+                                        '_blank'
+                                    );
+                                },
+                            },
+                            {
+                                title: 'rezendedev.net',
+                                text: `I think we don't need screenshots, you are already here, so I'll leave a pair of Bob Ross photos!
+                                    It's a funny story, I own this domain since 2021 or so... and spent so much time postponing the development because I didn't have an idea that satisfied me. So, suddenly, I had it and here we are. 
+                                    I decided to develop it using React along with Typescript and Sass - I already used frameworks like Tailwind/Bulma but i prefer the old ways.`,
+                                images: [BobRossOne, BobRossTwo],
+                                onClick: null,
+                            },
+                        ]}
+                    />
+                );
+            case 'pillarsofcreation.sail':
+                return (
+                    <CrossContentDisplay
+                        title="The Pillars:"
+                        items={[
+                            {
+                                title: 'Sketchy Bird',
+                                text: `It was the first game that I did "alone"- me, the sweet documentation and StackOverflow. Sadly, I lost the .exe, the art and the Unity project but I still have the source code for the scripts on my GitHub - 
+                                it's on a private repository but I can show it, if necessary. For creating the game:  art on Leonardo Drawing App, sound effects on Audacity and, as I spoiled before, Unity Game Engine along with C# for programming. 
+                                I created the game at the start of 2022 and for me was a very nice feeling to finish a project.`,
+                                images: [SketchyTwo, SketchyOne],
+                                onClick: null,
+                            },
+                            {
+                                title: 'Sandtide',
+                                text: `Sandtide is a side-project that I'm developing along with two friends: Erik - aka Joe Grace - and Pezzo. Sandtide is an isometric pixel art strategy game with random world-generation where you're a commander of an expedition on a 
+                                new discovered planet that has an unique ore: the Enud. Due to work and college, the development is on a slow pace but we definetly going to finish and release it. Within the team, I act as Game Designer, Programmer, 
+                                Artist and Musician. Out of curiosity, Joe Grace acts like a Programmer and Game Designer along with Pezzo on the project. The main goal of the game is to extract as many ores as you can while evolving your different 
+                                structures and avoiding the sand monsters that are attracted by sound.`,
+                                images: [SandtideOne, SandtideTwo],
+                                onClick: null,
+                            },
+                        ]}
+                    />
+                );
+            case 'utilitarywindmill.sail':
+                return <UtilitaryWindmill />;
             case 'towersofwisdom.sail':
                 return <TowerOfWisdom />;
+
             default:
                 return null;
         }

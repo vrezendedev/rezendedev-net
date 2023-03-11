@@ -15,6 +15,10 @@
     left: 1.7%;
     overflow: scroll;
     overflow-x: hidden;
+    animation-name: windowFadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
 }
 
 .cross-content-title {
@@ -28,13 +32,19 @@
     padding-top: 2px;
     padding-right: 0;
     font-family: '8-bit Limit';
-    font-size: 18px;
+    font-size: 20px;
     color: lightgoldenrodyellow;
     text-decoration: underline;
     &::first-letter {
         font-size: 24px;
     }
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cross-content-title-expand {
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .cross-item {
@@ -61,18 +71,22 @@
 }
 
 .cross-item-title {
-    font-size: 16px;
     border-bottom: 1px wheat solid;
     margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 18px;
     &::first-letter {
         font-size: 20px;
     }
 }
 
 .cross-item-text {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.25;
     margin-top: 10px;
+    &::first-letter {
+        font-size: 18px;
+    }
 }
 
 .cross-item-reverse {

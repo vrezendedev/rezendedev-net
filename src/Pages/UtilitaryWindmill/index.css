@@ -6,6 +6,10 @@
   top: 10.5%;
   left: 1.7%;
   z-index: 17;
+  animation-name: windowFadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
 }
 
 .utilitary-windmill-content {

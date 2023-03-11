@@ -4,6 +4,7 @@ export type CrossItemContent = {
     title: string;
     text: string;
     images: string[];
+    onClick: null | (() => void);
 };
 
 export type CrossContentDisplayProps = {
@@ -27,7 +28,18 @@ function CrossContentDisplay({ title, items }: CrossContentDisplayProps) {
                         }
                     >
                         <div className="cross-text-content">
-                            <p className="cross-item-title">{obj.title}</p>
+                            <p
+                                className={
+                                    obj.onClick != null
+                                        ? 'cross-item-title cross-content-title-expand'
+                                        : 'cross-item-title'
+                                }
+                                onClick={
+                                    obj.onClick != null ? obj.onClick : () => {}
+                                }
+                            >
+                                {obj.title}
+                            </p>
                             <p className="cross-item-text">{obj.text}</p>
                         </div>
                         <CarouselArrowed
