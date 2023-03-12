@@ -1,6 +1,6 @@
 @font-face {
     font-family: '8-bit Limit';
-    src: url('../../Assets/8-bit-limit.brk.ttf');
+    src: url('../../Assets/8-bit-limit.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -35,8 +35,8 @@
 }
 
 .carousel-item {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
     display: flex;
     position: relative;
     justify-content: center;
@@ -50,10 +50,16 @@
 .carousel-image {
     opacity: 0.5;
     &:hover {
-        cursor: pointer;
+        cursor: help;
         opacity: 1;
     }
     transition: opacity ease-in-out 0.3s;
+}
+
+.carousel-image-with-click {
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .item-subtitle-div {

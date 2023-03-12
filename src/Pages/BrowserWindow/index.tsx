@@ -27,6 +27,7 @@ import TowerOfWisdom from '../TowerOfWisdom';
 import LighthouseOfTech from '../LighthouseOfTech';
 import CrossContentDisplay from '../Templates/CrossContentDisplay';
 import UtilitaryWindmill from '../UtilitaryWindmill';
+import SliderCarouselAndTextDisplay from '../Templates/SliderCarouselAndTextDisplay';
 
 type BrowserContent =
     | 'towersofwisdom.sail'
@@ -180,7 +181,30 @@ function Browser({
                 return <UtilitaryWindmill />;
             case 'towersofwisdom.sail':
                 return <TowerOfWisdom />;
-
+            case 'towerof2d.sail':
+                return (
+                    <SliderCarouselAndTextDisplay
+                        quote="The memoir of sanity is represented by art... wait, what am I talking about?"
+                        author="H. Oblivious, the forgetful and wise artist."
+                        textTitle="Each pixel, another step climbing:"
+                        text={``}
+                        carouselProps={{
+                            itemsType: '2D',
+                            sliderHeight: '160px',
+                            collection: [
+                                {
+                                    title: 'Bob Ross',
+                                    height: '150px',
+                                    width: '180px',
+                                    onClick: () => {
+                                        open(BobRossOne, '_blank');
+                                    },
+                                    content: BobRossOne,
+                                },
+                            ],
+                        }}
+                    />
+                );
             default:
                 return null;
         }

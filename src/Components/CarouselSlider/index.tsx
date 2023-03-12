@@ -8,7 +8,7 @@ export type CarouselSliderItem = {
     content: string;
     width: string;
     height: string;
-    onClick: () => void;
+    onClick: null | (() => void);
 };
 
 export type CarouselSliderProps = {
@@ -37,7 +37,11 @@ function CarouselSlider({
                             width: item.width,
                             height: item.height,
                         }}
-                        className="carousel-image"
+                        className={
+                            item.onClick != null
+                                ? 'carousel-image carousel-image-with-click'
+                                : 'carousel-image'
+                        }
                         draggable={false}
                         onMouseOver={() => {
                             setMouseOnContent(true);
@@ -47,7 +51,7 @@ function CarouselSlider({
                             setMouseOnContent(false);
                             setDisplaySubtitle('');
                         }}
-                        onClick={item.onClick}
+                        onClick={item.onClick != null ? item.onClick : () => {}}
                     />
                     {displaySubtitle == item.title ? (
                         <div className="item-subtitle-div">
@@ -93,9 +97,10 @@ function CarouselSlider({
                 }}
                 dragConstraints={carousel}
                 drag={mouseOnContent == false ? 'x' : false}
+                dragElastic={1}
                 initial={{ x: 500 }}
-                animate={{ x: 150 }}
-                transition={{ duration: 0.8, delay: 1.5 }}
+                animate={{ x: 0 }}
+                transition={{ duration: 0.8 }}
                 style={{ height: sliderHeight }}
             >
                 <motion.div className="carousel-items">

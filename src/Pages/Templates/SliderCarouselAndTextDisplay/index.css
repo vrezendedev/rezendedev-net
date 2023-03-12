@@ -1,6 +1,6 @@
 @font-face {
   font-family: "8-bit Limit";
-  src: url("../../../Assets/8-bit-limit.brk.ttf");
+  src: url("../../../Assets/8-bit-limit.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -12,6 +12,10 @@
   height: 435px;
   top: 10.5%;
   left: 1.7%;
+  animation-name: windowFadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
 }
 
 .quote-slider-quote-div {
@@ -84,7 +88,8 @@
   display: block;
   position: absolute;
   text-align: justify;
-  height: 160px;
+  width: 505px;
+  height: 150px;
   top: 22%;
   left: 0.26%;
   padding-top: 2px;
@@ -94,6 +99,10 @@
   border-left: 0;
   border-right: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-color: rgba(0, 0, 0, 0.5) wheat;
+  scrollbar-width: thin;
 }
 .quote-slider-text-content::first-letter {
   font-size: 20px;
@@ -102,6 +111,6 @@
 .quote-slider-carousel {
   display: block;
   position: absolute;
-  left: 0.21%;
+  left: 0.18%;
   bottom: 0.5%;
 }/*# sourceMappingURL=index.css.map */

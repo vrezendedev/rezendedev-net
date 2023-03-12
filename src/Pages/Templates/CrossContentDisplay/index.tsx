@@ -21,6 +21,7 @@ function CrossContentDisplay({ title, items }: CrossContentDisplayProps) {
             {items.map((obj, index) => {
                 return (
                     <div
+                        key={obj.title + index}
                         className={
                             index % 2 == 0
                                 ? 'cross-item'
