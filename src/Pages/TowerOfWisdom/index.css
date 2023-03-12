@@ -60,6 +60,8 @@
   overflow: scroll;
   overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.5);
+  scrollbar-color: rgba(0, 0, 0, 0.5) wheat;
+  scrollbar-width: thin;
 }
 .tower-wisdom-text-content::first-letter {
   font-size: 20px;

@@ -22,6 +22,8 @@
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.3s;
+  scrollbar-color: rgba(0, 0, 0, 0.5) wheat;
+  scrollbar-width: thin;
 }
 
 .lighthouse-content {
@@ -67,6 +69,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   overflow-y: scroll;
   text-align: justify;
+  scrollbar-color: rgba(0, 0, 0, 0.5) wheat;
+  scrollbar-width: thin;
 }
 .lighthouse-text::first-letter {
   font-size: 18px;

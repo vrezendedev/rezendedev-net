@@ -18,6 +18,8 @@
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.3s;
+  scrollbar-color: rgba(0, 0, 0, 0.5) wheat;
+  scrollbar-width: thin;
 }
 
 .cross-content-title {
@@ -65,6 +67,8 @@
   padding-left: 5px;
   padding-right: 10px;
   background-color: rgba(0, 0, 0, 0.5);
+  scrollbar-color: rgba(0, 0, 0, 0.5) wheat;
+  scrollbar-width: thin;
 }
 
 .cross-item-title {

@@ -34,7 +34,6 @@
     &::first-letter {
         font-size: 24px;
     }
-
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -65,6 +64,8 @@
     &::first-letter {
         font-size: 20px;
     }
+    scrollbar-color: rgba(0, 0, 0, 0.5) wheat;
+    scrollbar-width: thin;
 }
 
 .tower-wisdom-images {
