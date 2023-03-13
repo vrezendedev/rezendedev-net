@@ -52,7 +52,7 @@ function UtilitaryWindmill() {
                 <div className="utilitary-windmill-text-div">
                     {windmillItemsText[itemSelected] != null ? (
                         <p className="utilitary-windmill-text">
-                            {windmillItemsText[itemSelected]}
+                            &emsp;{windmillItemsText[itemSelected]}
                         </p>
                     ) : null}
                 </div>

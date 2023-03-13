@@ -41,7 +41,7 @@ function CrossContentDisplay({ title, items }: CrossContentDisplayProps) {
                             >
                                 {obj.title}
                             </p>
-                            <p className="cross-item-text">{obj.text}</p>
+                            <p className="cross-item-text">&emsp;{obj.text}</p>
                         </div>
                         <CarouselArrowed
                             id={obj.title + index}

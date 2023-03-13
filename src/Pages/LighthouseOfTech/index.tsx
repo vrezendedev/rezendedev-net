@@ -100,7 +100,7 @@ function LighthouseOfTech() {
                                         : ''
                                 }
                             >
-                                {obj.content}
+                                &emsp;{obj.content}
                             </p>
                         </div>
                         <div className="lighthouse-carousel">

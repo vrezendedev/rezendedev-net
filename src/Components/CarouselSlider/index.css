@@ -48,6 +48,8 @@
 
 .carousel-image {
   opacity: 0.5;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: opacity ease-in-out 0.3s;
 }
 .carousel-image:hover {
@@ -80,7 +82,7 @@
   opacity: 1;
   color: lightgoldenrodyellow;
   padding: 4px;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.6);
   animation-name: windowFadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;

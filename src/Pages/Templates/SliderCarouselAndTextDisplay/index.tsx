@@ -27,7 +27,7 @@ function SliderCarouselAndTextDisplay({
             </div>
             <div className="quote-slider-text-div">
                 <p className="quote-slider-text-title">{textTitle}</p>
-                <p className="quote-slider-text-content">{text}</p>
+                <p className="quote-slider-text-content">&emsp;{text}</p>
             </div>
             <div className="quote-slider-carousel">
                 <CarouselSlider

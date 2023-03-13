@@ -8,7 +8,7 @@ export type CarouselSliderItem = {
     content: string;
     width: string;
     height: string;
-    onClick: null | (() => void);
+    onClick?: () => void;
 };
 
 export type CarouselSliderProps = {
@@ -38,7 +38,7 @@ function CarouselSlider({
                             height: item.height,
                         }}
                         className={
-                            item.onClick != null
+                            item.onClick != undefined
                                 ? 'carousel-image carousel-image-with-click'
                                 : 'carousel-image'
                         }
@@ -51,7 +51,7 @@ function CarouselSlider({
                             setMouseOnContent(false);
                             setDisplaySubtitle('');
                         }}
-                        onClick={item.onClick != null ? item.onClick : () => {}}
+                        onClick={item.onClick}
                     />
                     {displaySubtitle == item.title ? (
                         <div className="item-subtitle-div">
