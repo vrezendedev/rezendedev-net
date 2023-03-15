@@ -43,6 +43,9 @@ import Plant from './../../Assets/Art/2D/Plant.png';
 import Lagiacrus from './../../Assets/Art/2D/Lagiacrus.png';
 import Penguins from './../../Assets/Art/2D/Penguins.png';
 
+import Grave from './../../Assets/Art/3D/grave.glb';
+import QuoteAndTextDisplay from '../Templates/QuoteAndTextDisplay';
+
 type BrowserContent =
     | 'towersofwisdom.sail'
     | 'codesdock.sail'
@@ -292,6 +295,45 @@ function Browser({
                                 },
                             ],
                         }}
+                    />
+                );
+            case 'castleof3d.sail':
+                return (
+                    <SliderCarouselAndTextDisplay
+                        quote="A Donut can also be a 3D Model."
+                        author="Random Guru."
+                        textTitle="Placing cubes as placing bricks on castles:"
+                        text={`3D is such an interesting kind of art... I'm not saying that others are uninteresting but there is this peculiar combination between technology and art with this one. 
+                        I'm more an enthusiast than anything else when we talk about 3D Art. Maybe its because I really like simplicity over complexity but when I create 3D Art I go right into low poly models. 
+                        The combination between low poly and pixelated or handpainted textures is something that really catches me, so I'll focus on that. Currently using Blender and no plans for changing to another software. 
+                        As for inspirations/recommendations, I would like to name a few creators: Tooley1998, Blender Guru, Granth Abbott and William Santacruz - check them out on YouTube.`}
+                        carouselProps={{
+                            itemsType: '3D',
+                            sliderHeight: '160px',
+                            collection: [
+                                {
+                                    title: 'Just a placeholder, also a Grave.',
+                                    height: '150px',
+                                    width: '150px',
+                                    content: Grave,
+                                },
+                                {
+                                    title: 'Just another placeholder, also a Grave again.',
+                                    height: '150px',
+                                    width: '150px',
+                                    content: Grave,
+                                },
+                            ],
+                        }}
+                    />
+                );
+            case 'inspirationvillage.sail':
+                return (
+                    <QuoteAndTextDisplay
+                        quote="There are no mistakes, just happy accidents."
+                        author="Bob Ross, it is Bob Ross."
+                        textTitle="Creating art through inspiration, but who or what inspires me?"
+                        text=""
                     />
                 );
             default:

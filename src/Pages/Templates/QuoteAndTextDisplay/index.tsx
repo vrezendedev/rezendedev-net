@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './index.css';
 
 export type QuoteAndTextDisplayProps = {
@@ -13,6 +14,12 @@ function QuoteAndTextDisplay({
     textTitle,
     text,
 }: QuoteAndTextDisplayProps) {
+    useEffect(() => {
+        document.getElementsByClassName(
+            'quote-text-text-content'
+        )[0].innerHTML = text;
+    }, []);
+
     return (
         <div className="quote-text-content-main">
             <div className="quote-text-quote-div">
