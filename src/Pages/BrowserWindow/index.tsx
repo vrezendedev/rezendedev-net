@@ -333,7 +333,19 @@ function Browser({
                         quote="There are no mistakes, just happy accidents."
                         author="Bob Ross, it is Bob Ross."
                         textTitle="Creating art through inspiration, but who or what inspires me?"
-                        text=""
+                        text={`&emsp;Creativity, for me, is one of the most important traits that anyone can have and/or develop. Beyond that, art in any form is a magnificent way to practice and explore creativity. 
+                        When you draw or  paint or create a 3D model... you bring an idea to life - not literally, but quite. If you want to have interesting ideas you have to see the world and what I mean with that? 
+                        Well, ideas can pop up from anywhere but usually inspiration can come through any other artists. 
+                        <br /> 
+                        &emsp;You can have an idea for a piece while reading, listening to music, watching a movie, playing a game, contemplating about another artist's piece and so on. But... there will always be some artists that trully inspires you - 
+                        here, in Inspiration Village, I'll just mention the visual part of it. 
+                        <br />
+                        &emsp;I'm completely inspired by Eric Barone... his art pieces really represents the passion for his creations and that, in a way, enhances the beauty of the pixels. Stardew Valley has an unique touch that brings nostalgia yet shows something new. 
+                        <br />
+                        &emsp;Do I need to explain why Bob Ross is an inspiration? Art is a way to de-stress your mind and he, clearly, showed that. 
+                        <br />
+                        &emsp;To mention a few non-name specific inspirations: Gravity Falls,  A Hat In Time, Celeste,  
+                        Ragnarok and many others. Well, probably that already gave you an idea about who or what inspires me.`}
                     />
                 );
             default:

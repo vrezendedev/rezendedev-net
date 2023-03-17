@@ -91,10 +91,15 @@
   padding-top: 2px;
   padding-left: 5px;
   padding-right: 8px;
+  padding-bottom: 5px;
   border: 1px solid white;
   border-left: 0;
   border-right: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-color: rgba(0, 0, 0, 0.5) wheat;
+  scrollbar-width: thin;
 }
 .quote-text-text-content::first-letter {
   font-size: 20px;
