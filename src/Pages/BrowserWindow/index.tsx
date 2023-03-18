@@ -46,6 +46,24 @@ import Penguins from './../../Assets/Art/2D/Penguins.png';
 import Grave from './../../Assets/Art/3D/grave.glb';
 import QuoteAndTextDisplay from '../Templates/QuoteAndTextDisplay';
 
+import DiscRed from './../../Assets/Icons/DiscRed.png';
+import DiscBlue from './../../Assets/Icons/DiscBlue.png';
+
+import FronzenInGMajor from './../../Assets/Art/Music/frozen_in_g_major.mp3';
+import SummerFestivalExperimental from './../../Assets/Art/Music/summer_festival_experimental.mp3';
+
+const audio = new Audio();
+
+audio.onplaying = () => {
+    audio.volume = 0.0;
+    const id = setInterval(() => {
+        audio.volume += 0.01;
+        if (audio.volume == 0.15) {
+            clearInterval(id);
+        }
+    }, 250);
+};
+
 type BrowserContent =
     | 'towersofwisdom.sail'
     | 'codesdock.sail'
@@ -91,6 +109,7 @@ function Browser({
     const [mouseOnHeader, setMouseOnHeader] = useState(false);
     const [display, setDisplay] = useState('none');
     const [isLoading, setIsLoading] = useState(false);
+    const [lastMusic, setLastMusic] = useState('');
 
     useEffect(() => {
         document.body.style.cursor = 'wait';
@@ -346,6 +365,63 @@ function Browser({
                         <br />
                         &emsp;To mention a few non-name specific inspirations: Gravity Falls,  A Hat In Time, Celeste,  
                         Ragnarok and many others. Well, probably that already gave you an idea about who or what inspires me.`}
+                    />
+                );
+            case 'melodicalharp.sail':
+                return (
+                    <SliderCarouselAndTextDisplay
+                        quote="Mighty music will declare war against meaningless forces!"
+                        author="Slayes, the bard."
+                        textTitle="Music-evoked emotions:"
+                        text={``}
+                        carouselProps={{
+                            itemsType: '2D',
+                            sliderHeight: '160px',
+                            collection: [
+                                {
+                                    title: 'Frozen in G Major',
+                                    height: '128px',
+                                    width: '128px',
+                                    content: DiscBlue,
+                                    onClick: () => {
+                                        if (
+                                            !audio.paused &&
+                                            lastMusic === FronzenInGMajor
+                                        ) {
+                                            audio.pause();
+                                        } else {
+                                            setLastMusic(FronzenInGMajor);
+                                            audio.currentTime = 0;
+                                            audio.src = FronzenInGMajor;
+                                            audio.play();
+                                        }
+                                    },
+                                },
+                                {
+                                    title: 'Experimental - Summer Festival',
+                                    height: '128px',
+                                    width: '128px',
+                                    content: DiscRed,
+                                    onClick: () => {
+                                        if (
+                                            !audio.paused &&
+                                            lastMusic ===
+                                                SummerFestivalExperimental
+                                        ) {
+                                            audio.pause();
+                                        } else {
+                                            setLastMusic(
+                                                SummerFestivalExperimental
+                                            );
+                                            audio.currentTime = 0;
+                                            audio.src =
+                                                SummerFestivalExperimental;
+                                            audio.play();
+                                        }
+                                    },
+                                },
+                            ],
+                        }}
                     />
                 );
             default:
