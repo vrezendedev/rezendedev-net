@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import './index.css';
 
 import CarouselSlider, {
@@ -19,6 +21,12 @@ function SliderCarouselAndTextDisplay({
     text,
     carouselProps,
 }: SliderCarouselAndTextDisplayProps) {
+    useEffect(() => {
+        document.getElementsByClassName(
+            'quote-slider-text-content'
+        )[0].innerHTML = text;
+    }, []);
+
     return (
         <div className="quote-slider-content-main">
             <div className="quote-slider-quote-div">
@@ -27,7 +35,7 @@ function SliderCarouselAndTextDisplay({
             </div>
             <div className="quote-slider-text-div">
                 <p className="quote-slider-text-title">{textTitle}</p>
-                <p className="quote-slider-text-content">&emsp;{text}</p>
+                <p className="quote-slider-text-content"></p>
             </div>
             <div className="quote-slider-carousel">
                 <CarouselSlider

@@ -223,10 +223,11 @@ function Browser({
                         quote="The memoir of sanity is represented by art... wait, what am I talking about?"
                         author="H. Oblivious, the forgetful and wise artist."
                         textTitle="Each pixel, another step climbing:"
-                        text={`Expressing myself through art is one of the most relevant and delightful activity for me. Bob Ross, Eric Barone and Adam Younis are figures that has influenced me of getting into art... because of the last two, specific pixel art. 
-                        Pixel art allows complexity through simplicity due the amount of information that a single pixel can represent.
-                        I've been going back and forth with art because of time-consuming stuff such as college and work - that's why it as a hobby for me. 
-                        Even though it's a hobby, I still try to learn and study about it. Below you can check some pieces of pixel art and sketches - the softwares that I like to use are Aseprite and Leonardo.`}
+                        text={`&emsp;Expressing myself through art is one of the most relevant and delightful activity for me. Bob Ross, Eric Barone and Adam Younis are figures that has influenced me of getting into art... because of the last two, specific pixel art. 
+                        <br />
+                        &emsp;Pixel art allows complexity through simplicity due the amount of information that a single pixel can represent. I've been going back and forth with art because of time-consuming stuff such as college and work - that's why it as a hobby for me. 
+                        <br />
+                        &emsp;Even though it's a hobby, I still try to learn and study about it. Below you can check some pieces of pixel art and sketches - the softwares that I like to use are Aseprite and Leonardo.`}
                         carouselProps={{
                             itemsType: '2D',
                             sliderHeight: '160px',
@@ -322,10 +323,12 @@ function Browser({
                         quote="A Donut can also be a 3D Model."
                         author="Random Guru."
                         textTitle="Placing cubes as placing bricks on castles:"
-                        text={`3D is such an interesting kind of art... I'm not saying that others are uninteresting but there is this peculiar combination between technology and art with this one. 
-                        I'm more an enthusiast than anything else when we talk about 3D Art. Maybe its because I really like simplicity over complexity but when I create 3D Art I go right into low poly models. 
+                        text={`&emsp;3D is such an interesting kind of art... I'm not saying that others are uninteresting but there is this peculiar combination between technology and art with this one. 
+                        <br />
+                        &emsp;I'm more an enthusiast than anything else when we talk about 3D Art. Maybe its because I really like simplicity over complexity but when I create 3D Art I go right into low poly models. 
                         The combination between low poly and pixelated or handpainted textures is something that really catches me, so I'll focus on that. Currently using Blender and no plans for changing to another software. 
-                        As for inspirations/recommendations, I would like to name a few creators: Tooley1998, Blender Guru, Granth Abbott and William Santacruz - check them out on YouTube.`}
+                        <br />
+                        &emsp;As for inspirations/recommendations, I would like to name a few creators: Tooley1998, Blender Guru, Granth Abbott and William Santacruz - check them out on YouTube.`}
                         carouselProps={{
                             itemsType: '3D',
                             sliderHeight: '160px',
@@ -356,7 +359,7 @@ function Browser({
                         When you draw or  paint or create a 3D model... you bring an idea to life - not literally, but quite. If you want to have interesting ideas you have to see the world and what I mean with that? 
                         Well, ideas can pop up from anywhere but usually inspiration can come through any other artists. 
                         <br /> 
-                        &emsp;You can have an idea for a piece while reading, listening to music, watching a movie, playing a game, contemplating about another artist's piece and so on. But... there will always be some artists that trully inspires you - 
+                        &emsp;You can have an idea for a piece while reading, listening to music, watching a movie, playing a game, contemplating about another artist's piece and so on. But... there will always be some artists that truly inspires you - 
                         here, in Inspiration Village, I'll just mention the visual part of it. 
                         <br />
                         &emsp;I'm completely inspired by Eric Barone... his art pieces really represents the passion for his creations and that, in a way, enhances the beauty of the pixels. Stardew Valley has an unique touch that brings nostalgia yet shows something new. 
@@ -373,7 +376,14 @@ function Browser({
                         quote="Mighty music will declare war against meaningless forces!"
                         author="Slayes, the bard."
                         textTitle="Music-evoked emotions:"
-                        text={``}
+                        text={`&emsp;Music is a very important part of my life. I quite listen to music 24/7 and have been trying to study composition for a while. For me it's such a great power to express ourselves and evoke emotions through sounds. 
+                        <br />
+                        &emsp;When I was a kid, my father insisted for me to try learn any instrument, so I took guitar classes and, then, a couple of years back I decided to learn piano. To be fair, I'm not that good with the practical part but I really like to create stuff - that's why I tended to composition / music production.  
+                        <br />
+                        &emsp;Here, below, I'll show what I call music sketches... I usually try to create a few with an ambience in mind to, rapidly, evoke a target emotion. Since I focused on creating game soundtracks I find these little sketches very useful - it's a faster way to put into practice theoretical stuff.  
+                        <br />
+                        &emsp;Creating games is a synonym for creating experiences and music is one of the leading actors in this context. Finally, since it's such a personal relation between the listener and the track, sometimes the evoked emotion will not be the targeted one. 
+                        But that's okay, what really matters is that it should be meaningful or intriguing for the listener and that's what I, deeply, try to achieve.`}
                         carouselProps={{
                             itemsType: '2D',
                             sliderHeight: '160px',
@@ -422,6 +432,25 @@ function Browser({
                                 },
                             ],
                         }}
+                    />
+                );
+            case 'collectorscabin.sail':
+                return (
+                    <QuoteAndTextDisplay
+                        quote="Yeah, let's make terrible music."
+                        author="Young C418, on an interview."
+                        textTitle="Trial and Error and Inspiration!"
+                        text={`&emsp;First of all, I freaking love soundtracks. Each song represents so much and the creators are truly masters... so a quick shot-out for a few: C418, Laura Shigihara, Lena Raine, Jemery Soule and ConcernedApe (yes, again). 
+                        These are a few who inspires me to keep going and trying to create meaningful tracks not only for others but for me too. 
+                        Out of curiosity, I do have other sources of inspiration... as I like a couple of different music genres: Power & Symphonic Metal, Instrumental, Classic, Country, Rock...  
+                        <br />
+                        &emsp;When I try to compose, I do a trial and error section, trying to understand where I want to go on that imagined scenario. Maybe that's because I don't have a complete knowdlegde on the subject or that's just the way I like to compose - anyway, 
+                        it's worth mention it. 
+                        <br />
+                        &emsp;I could talk about a lot of things that I find interesting about music but one thing that I really want to mention is the timeless aspect of it. Music can carry emotions with it and make you remember when you listen to it. 
+                        For example, Harry Potter's soundtrack is pure nostalgia for me and the feelings that it brings it's unique... so as for Minecraft's soundtrack.. and so on. 
+                        <br />
+                        &emsp;The point is, as a composer you can create something that stores feelings and memories and that's amazing. That's why I'm into music too. `}
                     />
                 );
             default:

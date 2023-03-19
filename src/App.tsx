@@ -34,7 +34,7 @@ function App() {
     }, []);
 
     useEffect(() => {
-        if (windowSize.width >= 1024) {
+        if (windowSize.width >= 1180) {
             SetPlatform('desktop');
         } else {
             SetPlatform('mobile');

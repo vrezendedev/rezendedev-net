@@ -6,12 +6,12 @@
   padding: 0;
   overflow: hidden;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1180px) {
   .main-app {
     background-image: url("./Assets/Desktop/WindowsXPWallpaper.jpg");
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
   .main-app {
     background-color: black;
   }
