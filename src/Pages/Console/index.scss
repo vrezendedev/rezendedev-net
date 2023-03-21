@@ -20,6 +20,8 @@
     min-height: 75vh;
     width: 91vw;
     border: solid white thin;
+
+    box-shadow: 2px 3px 5px rgba(255, 255, 255, 0.5);
 }
 
 .console-main-input-div {
@@ -35,12 +37,13 @@
     margin-top: 10px;
     display: block;
     position: relative;
-    width: 90vw;
+    width: 89.7vw;
     height: 5.2vh;
-    left: -0.9%;
+    right: 1%;
     background-color: transparent;
     border: solid white thin;
     padding: 3px;
+    box-shadow: 2px 3px 5px rgba(255, 255, 255, 0.5);
 }
 
 .output {
