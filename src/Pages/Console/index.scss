@@ -29,14 +29,18 @@
 }
 
 .input {
+    font-family: 'Classic Console Neue';
+    color: white;
+    font-size: x-large;
     margin-top: 10px;
     display: block;
     position: relative;
-    width: 90.5vw;
+    width: 90vw;
     height: 5.2vh;
     left: -0.9%;
     background-color: transparent;
     border: solid white thin;
+    padding: 3px;
 }
 
 .output {
