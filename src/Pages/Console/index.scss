@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Classic Console Neue';
+    src: url('./../../Assets/clacon2.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.console-main-div {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.console-main-output-div {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    min-height: 75vh;
+    width: 91vw;
+    border: solid white thin;
+}
+
+.console-main-input-div {
+    height: 25%;
+    width: 90vw;
+    min-height: 25vh;
+}
+
+.input {
+    margin-top: 10px;
+    display: block;
+    position: relative;
+    width: 90.5vw;
+    height: 5.2vh;
+    left: -0.9%;
+    background-color: transparent;
+    border: solid white thin;
+}
+
+.output {
+    font-family: 'Classic Console Neue';
+    color: green;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    text-align: justify;
+    font-size: x-large;
+}

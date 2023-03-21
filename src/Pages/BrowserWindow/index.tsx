@@ -1,4 +1,4 @@
-import { useState, useEffect, ReactNode, ComponentType } from 'react';
+import { useState, useEffect } from 'react';
 
 import './../BrowserWindow/index.css';
 
@@ -37,6 +37,7 @@ import Cuphead from './../../Assets/Art/2D/Cuphead.png';
 import CupheadThumb from './../../Assets/Art/2D/CupheadThumb.png';
 import PrincessDragon from './../../Assets/Art/2D/PrincessDragon.png';
 import PrincessDragonThumb from './../../Assets/Art/2D/PrincessDragonThumb.png';
+
 import Tent from './../../Assets/Art/2D/Tent.png';
 import Wally from './../../Assets/Art/2D/Wally.png';
 import Plant from './../../Assets/Art/2D/Plant.png';
@@ -58,7 +59,7 @@ audio.onplaying = () => {
     audio.volume = 0.0;
     const id = setInterval(() => {
         audio.volume += 0.01;
-        if (audio.volume == 0.15) {
+        if (audio.volume == 0.25) {
             clearInterval(id);
         }
     }, 250);
@@ -441,7 +442,7 @@ function Browser({
                         author="Young C418, on an interview."
                         textTitle="Trial and Error and Inspiration!"
                         text={`&emsp;First of all, I freaking love soundtracks. Each song represents so much and the creators are truly masters... so a quick shot-out for a few: C418, Laura Shigihara, Lena Raine, Jemery Soule and ConcernedApe (yes, again). 
-                        These are a few who inspires me to keep going and trying to create meaningful tracks not only for others but for me too. 
+                        These are a few who inspires me to keep going and trying to create meaningful tracks not only for others but for me too.
                         Out of curiosity, I do have other sources of inspiration... as I like a couple of different music genres: Power & Symphonic Metal, Instrumental, Classic, Country, Rock...  
                         <br />
                         &emsp;When I try to compose, I do a trial and error section, trying to understand where I want to go on that imagined scenario. Maybe that's because I don't have a complete knowdlegde on the subject or that's just the way I like to compose - anyway, 

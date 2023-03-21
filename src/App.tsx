@@ -4,6 +4,7 @@ import Icon from './Assets/Desktop/Icon.png';
 
 import './main.css';
 
+import Console from './Pages/Console';
 import MainWindow from './Pages/MainWindow';
 
 function App() {
@@ -59,7 +60,7 @@ function App() {
                     style={{
                         borderColor: 'rgba(0, 190, 255, .4)',
                         borderStyle: selected == true ? 'solid' : '',
-                        borderWidth: selected == true ? '2px' : '0px',
+                        borderWidth: '2px',
                         backgroundColor:
                             selected == true ? 'rgba(0, 190, 255, .4)' : '',
                     }}
@@ -75,7 +76,7 @@ function App() {
         </>
     ) : (
         <>
-            <h1 style={{ color: 'white' }}>Hey, pal, fix that width!</h1>
+            <Console />
         </>
     );
 }
