@@ -54,16 +54,7 @@ import FronzenInGMajor from './../../Assets/Art/Music/frozen_in_g_major.mp3';
 import SummerFestivalExperimental from './../../Assets/Art/Music/summer_festival_experimental.mp3';
 
 const audio = new Audio();
-
-audio.onplaying = () => {
-    audio.volume = 0.0;
-    const id = setInterval(() => {
-        audio.volume += 0.01;
-        if (audio.volume == 0.25) {
-            clearInterval(id);
-        }
-    }, 250);
-};
+audio.volume = 0.25;
 
 type BrowserContent =
     | 'towersofwisdom.sail'
