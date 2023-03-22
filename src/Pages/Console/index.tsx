@@ -2,13 +2,58 @@ import { useState, useRef, useEffect } from 'react';
 
 import './index.css';
 
+import ResumePT from './../../Assets/Files/Resume PTBR - Vinicius Rezende.pdf';
+import ResumeEN from './../../Assets/Files/Resume EN - Vinicius Rezende.pdf';
+
+const availableCommands = [
+    '/start',
+    '/help',
+    '/get about',
+    '/get external',
+    '/open github',
+    '/open linkedin',
+    '/open bandcamp',
+    '/open itchio',
+    '/get curriculum',
+    '/download en-us',
+    '/download pt-br',
+    '/get misc',
+    '/get pip-boy',
+    '/get truth',
+];
+
 function Console() {
     const [isWriting, setIsWriting] = useState(false);
     const [openLinks, setOpenLinks] = useState(false);
+    const [shouldDownloadCurriculum, setShouldDownloadCurriculum] =
+        useState(false);
     const [option, setOption] = useState('/start');
     const [previousOption, setPreviousOption] = useState('');
     const output = useRef<HTMLParagraphElement>(null);
     const input = useRef<HTMLInputElement>(null);
+
+    const downloadCurriculum = (url: string) => {
+        fetch(url)
+            .then((response) => response.blob())
+            .then((blob) => {
+                const blobUrl = window.URL.createObjectURL(new Blob([blob]));
+                const fileName = url.split('/').pop();
+                const aTag = document.createElement('a');
+                aTag.href = url;
+                aTag.setAttribute('download', fileName as string);
+                document.body.appendChild(aTag);
+                aTag.click();
+                aTag.remove();
+            });
+    };
+
+    useEffect(() => {
+        if (output.current != null) {
+            if (option != previousOption) {
+                output.current.innerHTML = ConsoleOptions(option);
+            }
+        }
+    }, [option]);
 
     useEffect(() => {
         let id = 0;
@@ -27,20 +72,19 @@ function Console() {
                 }
             }, 1000);
         }
-
-        if (output.current != null) {
-            if (option != previousOption) {
-                output.current.innerHTML = ConsoleOptions(option);
-            }
-        }
-
         return () => clearInterval(id);
-    }, [option, isWriting]);
+    }, [isWriting]);
 
     function ExecuteConsole() {
         if (input.current != null) {
             if (input.current.value != null) {
-                setPreviousOption(option);
+                if (
+                    input.current.value != '/get back' &&
+                    input.current.value != option &&
+                    availableCommands.includes(input.current.value)
+                ) {
+                    setPreviousOption(option);
+                }
                 setOption(input.current.value);
                 input.current.value = '';
                 input.current.blur();
@@ -56,6 +100,7 @@ function Console() {
         switch (option) {
             case '/start':
                 setOpenLinks(false);
+                setShouldDownloadCurriculum(false);
                 return `> executed [/start]
                 <br/>
                 <br/>
@@ -73,6 +118,7 @@ function Console() {
                 > Type /help to show available commands...`;
             case '/help':
                 setOpenLinks(false);
+                setShouldDownloadCurriculum(false);
                 return `> executed [/help]
                 <br/>
                 <br/>
@@ -83,9 +129,12 @@ function Console() {
                 &emsp;&emsp;/get curriculum
                 <br/>
                 &emsp;&emsp;/get misc
-                <br/>`;
+                <br/>
+                &emsp;&emsp;/get back [previous master command]
+                `;
             case '/get about':
                 setOpenLinks(false);
+                setShouldDownloadCurriculum(false);
                 return `> executed [/get about]
                 <br/>
                 >...
@@ -149,8 +198,93 @@ function Console() {
                 return openLinks
                     ? '> executed [/open bandcamp]'
                     : '> unable to [re?] execute [/open bandcamp] by now...';
+            case '/get back':
+                setShouldDownloadCurriculum(false);
+                if (!previousOption.includes('open') && previousOption != '') {
+                    setOption(previousOption);
+                    setPreviousOption('');
+                } else if (previousOption == '') {
+                    setOption('/start');
+                } else if (previousOption.includes('download')) {
+                    setOption('/get curriculum');
+                    setPreviousOption('');
+                } else {
+                    setOption('/get external');
+                    setPreviousOption('');
+                }
+            case '/get curriculum':
+                setOpenLinks(false);
+                setShouldDownloadCurriculum(true);
+                return `> executed 
+                <br/>
+                &emsp;&emsp;[/get curriculum]
+                <br/>
+                <br/>
+                &emsp;&emsp;/download en-us
+                <br/>
+                &emsp;&emsp;/download pt-br`;
+            case '/download en-us':
+                if (shouldDownloadCurriculum) downloadCurriculum(ResumeEN);
+                return shouldDownloadCurriculum
+                    ? '> executed [/download en-us]'
+                    : '> unable to [re?] execute [/download en-us] by now...';
+            case '/download pt-br':
+                if (shouldDownloadCurriculum) downloadCurriculum(ResumePT);
+                return shouldDownloadCurriculum
+                    ? '> executed [/download pt-br]'
+                    : '> unable to [re?] execute [/download pt-br] by now...';
+            case '/get misc':
+                setOpenLinks(false);
+                setShouldDownloadCurriculum(false);
+                return `> executed [/get misc]
+                <br/>
+                <br/>
+                > This console represents a mobile version of this website...
+                <br/>
+                <br/>
+                > The purpose here was to create a different, but simple,
+                <br/>
+                &emsp;&emsp;&emsp;&emsp;<em>experience...</em>
+                <br/>
+                <br/>
+                > Try the 
+                <br/>
+                &emsp;&emsp;&emsp;&emsp;<em>desktop</em>
+                <br/>
+                &emsp;&emsp;version for another, 
+                <br/>
+                &emsp;&emsp;totally different,
+                <br/>
+                &emsp;&emsp;&emsp;&emsp;<em>experience...</em>
+                <br/>
+                <br/>
+                > Thank you for the attention!
+                `;
+            case '/get pip-boy':
+                setOpenLinks(false);
+                setShouldDownloadCurriculum(false);
+                return `> executed [/get pip-boy]
+                <br/>
+                <br/>
+                > Oh... a fellow Fallout fan!
+                <br/>
+                > Yep, it's an easter egg. Nice catch!
+                `;
+            case '/get truth':
+                setOpenLinks(false);
+                setShouldDownloadCurriculum(false);
+                return `> executed [/get truth]
+                <br/>
+                <br/>
+                > I...
+                <br/>
+                &emsp;&emsp;&emsp;&emsp;<em>freaking</em>
+                <br/>
+                &emsp;&emsp;love programming!
+                `;
             default:
                 setOpenLinks(false);
+                setShouldDownloadCurriculum(false);
                 return `> Undefined Command...
                 <br />
                 > `;
