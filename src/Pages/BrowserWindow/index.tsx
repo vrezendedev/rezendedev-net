@@ -22,6 +22,11 @@ import SketchyTwo from './../../Assets/Misc/SketchyBird_02.gif';
 import SandtideOne from './../../Assets/Misc/Sandtide_01.png';
 import SandtideTwo from './../../Assets/Misc/Sandtide_02.png';
 
+import WizfrozZero from './../../Assets/Misc/Wizfroz_00.png';
+import WizfrozOne from './../../Assets/Misc/Wizfroz_01.png';
+import WizfrozTwo from './../../Assets/Misc/Wizfroz_02.png';
+import WizfrozThree from './../../Assets/Misc/Wizfroz_03.png';
+
 import CodesDock from '../CodesDock';
 import TowerOfWisdom from '../TowerOfWisdom';
 import LighthouseOfTech from '../LighthouseOfTech';
@@ -49,9 +54,13 @@ import QuoteAndTextDisplay from '../Templates/QuoteAndTextDisplay';
 
 import DiscRed from './../../Assets/Icons/DiscRed.png';
 import DiscBlue from './../../Assets/Icons/DiscBlue.png';
+import DiscYellow from './../../Assets/Icons/DiscYellow.png';
+import DiscPurple from './../../Assets/Icons/DiscPurple.png';
 
 import FronzenInGMajor from './../../Assets/Art/Music/frozen_in_g_major.mp3';
 import SummerFestivalExperimental from './../../Assets/Art/Music/summer_festival_experimental.mp3';
+import WizfrozLevelSong from './../../Assets/Art/Music/wizfroz_level_song.wav';
+import WizfrozMainMenuSong from './../../Assets/Art/Music/wizfroz_main_menu.wav';
 
 const audio = new Audio();
 audio.volume = 0.25;
@@ -192,6 +201,24 @@ function Browser({
                                 I created the game at the start of 2022 and for me was a very nice feeling to finish a project.`,
                                 images: [SketchyTwo, SketchyOne],
                                 onClick: null,
+                            },
+                            {
+                                title: 'Wizfroz',
+                                text: `Wizfroz is a game  about a wizard frog that is running away from the evil flies empire. Cast spells and jump around across five unique levels. 
+                                The actual state of the game should not be considered as finished as the Art, UI, SFX and Music are not sufficiently "polished" - please, considered it as a proof of concept. 
+                                The entire game and it's features was developed/created by me - not including SFX.`,
+                                images: [
+                                    WizfrozZero,
+                                    WizfrozOne,
+                                    WizfrozTwo,
+                                    WizfrozThree,
+                                ],
+                                onClick: () => {
+                                    open(
+                                        'https://wiseshepherd.itch.io/wizfroz',
+                                        '_blank'
+                                    );
+                                },
                             },
                             {
                                 title: 'Sandtide',
@@ -418,6 +445,44 @@ function Browser({
                                             audio.currentTime = 0;
                                             audio.src =
                                                 SummerFestivalExperimental;
+                                            audio.play();
+                                        }
+                                    },
+                                },
+                                {
+                                    title: `Wizfroz's Levels`,
+                                    height: '128px',
+                                    width: '128px',
+                                    content: DiscYellow,
+                                    onClick: () => {
+                                        if (
+                                            !audio.paused &&
+                                            lastMusic === WizfrozLevelSong
+                                        ) {
+                                            audio.pause();
+                                        } else {
+                                            setLastMusic(WizfrozLevelSong);
+                                            audio.currentTime = 0;
+                                            audio.src = WizfrozLevelSong;
+                                            audio.play();
+                                        }
+                                    },
+                                },
+                                {
+                                    title: `Wizfroz's Main Menu`,
+                                    height: '128px',
+                                    width: '128px',
+                                    content: DiscPurple,
+                                    onClick: () => {
+                                        if (
+                                            !audio.paused &&
+                                            lastMusic === WizfrozMainMenuSong
+                                        ) {
+                                            audio.pause();
+                                        } else {
+                                            setLastMusic(WizfrozMainMenuSong);
+                                            audio.currentTime = 0;
+                                            audio.src = WizfrozMainMenuSong;
                                             audio.play();
                                         }
                                     },
