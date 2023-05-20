@@ -66,21 +66,21 @@ const LighthouseContent: Array<LighthouseItems> = [
     },
     {
         title: 'Still tying the knots:',
-        content: `For me, coding is all about challenge myself and constant learning.  Learning new programming languages and frameworks will make you a better developer. I chose these techs because they are very promising or they still very important for the market.`,
+        content: `For me, coding is all about challenge myself and constant learning.  Learning new programming languages and frameworks will make you a better developer. I chose these techs because they are very promising or they still relevant for the market.`,
         imgWidth: '90px',
         imgHeight: '90px',
         divHeight: '139px',
         divWidth: '175px',
-        collection: [Golang, Rust, Java, NextJS],
+        collection: [Golang, Lua, Rust],
     },
     {
         title: 'On the Horizon:',
-        content: `I still need to learn a bunch of stuff that are very important for modern web development (Docker, Kubernets, Redis... just to name a few) - and my interest and desire are aiming it. As a very curious programmer, I like to learn different and unique languages - that's why Lua is on the wishlist.`,
+        content: `I still need to learn a bunch of stuff that are very important for modern web development (Docker, Kubernetes... just to name a few) - and my interest and desire are aiming it. As a very curious programmer, I like to learn different and unique languages - that's why Lua is on the wishlist.`,
         imgWidth: '90px',
         imgHeight: '90px',
         divHeight: '139px',
         divWidth: '175px',
-        collection: [Docker, Kubernetes, Lua, Redis],
+        collection: [Docker, Kubernetes],
     },
 ];
 
