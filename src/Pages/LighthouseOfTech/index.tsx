@@ -20,13 +20,10 @@ import NPM from './../../Assets/Icons/NPM.svg';
 
 import Golang from './../../Assets/Icons/Golang.svg';
 import Rust from './../../Assets/Icons/Rust.svg';
-import Java from './../../Assets/Icons/Java.svg';
-import NextJS from './../../Assets/Icons/NextJS.svg';
 
 import Docker from './../../Assets/Icons/Docker.svg';
 import Kubernetes from './../../Assets/Icons/Kubernetes.svg';
 import Lua from './../../Assets/Icons/Lua.svg';
-import Redis from './../../Assets/Icons/Redis.svg';
 
 type LighthouseItems = {
     title: string;
