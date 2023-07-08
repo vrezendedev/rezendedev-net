@@ -3,6 +3,7 @@ import './index.css';
 import CarouselArrowed from '../../Components/CarouselArrows';
 
 import React from './../../Assets/Icons/React.svg';
+import Solid from './../../Assets/Icons/Solidjs.png';
 import CSharp from './../../Assets/Icons/CSharp.svg';
 import JS from './../../Assets/Icons/JS.svg';
 import TS from './../../Assets/Icons/TS.svg';
@@ -19,11 +20,11 @@ import GitHub from './../../Assets/Icons/GitHub.svg';
 import NPM from './../../Assets/Icons/NPM.svg';
 
 import Golang from './../../Assets/Icons/Golang.svg';
-import Rust from './../../Assets/Icons/Rust.svg';
+import OCaml from './../../Assets/Icons/OCaml.png';
+import Lua from './../../Assets/Icons/Lua.svg';
 
 import Docker from './../../Assets/Icons/Docker.svg';
 import Kubernetes from './../../Assets/Icons/Kubernetes.svg';
-import Lua from './../../Assets/Icons/Lua.svg';
 
 type LighthouseItems = {
     title: string;
@@ -45,6 +46,7 @@ const LighthouseContent: Array<LighthouseItems> = [
         divWidth: '175px',
         collection: [
             React,
+            Solid,
             CSharp,
             JS,
             TS,
@@ -63,12 +65,12 @@ const LighthouseContent: Array<LighthouseItems> = [
     },
     {
         title: 'Still tying the knots:',
-        content: `For me, coding is all about challenge myself and constant learning.  Learning new programming languages and frameworks will make you a better developer. I chose these techs because they are very promising or they still relevant for the market.`,
+        content: `For me, coding is all about challenge myself and constant learning.  Learning new programming languages and frameworks will make you a better developer. I chose these techs because they are very promising or they still relevant for the market or I just want to learn it.`,
         imgWidth: '90px',
         imgHeight: '90px',
         divHeight: '139px',
         divWidth: '175px',
-        collection: [Golang, Lua, Rust],
+        collection: [Golang, OCaml, Lua],
     },
     {
         title: 'On the Horizon:',
